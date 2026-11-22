@@ -1,0 +1,50 @@
+{
+  "chapter": "04",
+  "claims": [
+    {
+      "id": "source-0",
+      "claim": "OpenStax · Shifts in Demand and Supply",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "source-1",
+      "claim": "OpenStax · Competitive Firm Output Decisions",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "model-0",
+      "claim": "五个边际成本为3、5、7、10、13，价格8时前三件贡献为正",
+      "status": "derived",
+      "kind": "hypothetical_numerical_example",
+      "source_url": null,
+      "locator": "chapters/04.html",
+      "notes": "independently computed from stated model parameters"
+    },
+    {
+      "id": "model-1",
+      "claim": "供给右移20在P20时供给量从80变成100",
+      "status": "derived",
+      "kind": "hypothetical_numerical_example",
+      "source_url": null,
+      "locator": "chapters/04.html",
+      "notes": "independently computed from stated model parameters"
+    },
+    {
+      "id": "svgs",
+      "claim": "Original static SVG diagrams reproduce the numerical assumptions",
+      "status": "illustrative",
+      "kind": "figure",
+      "source_url": null,
+      "locator": "docs/assets/figures/",
+      "notes": "no external images copied"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "chapter": "05",
+  "claims": [
+    {
+      "id": "source-0",
+      "claim": "OpenStax · Equilibrium and Prices",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "source-1",
+      "claim": "OpenStax · Four-step Comparative Statics",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-3-changes-in-equilibrium-price-and-quantity-the-four-step-process",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "source-2",
+      "claim": "CORE Econ · Competitive Equilibrium Conditions",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://books.core-econ.org/the-economy/microeconomics/08-supply-demand-10-supply-demand-competitive-equilibrium.html",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "model-0",
+      "claim": "均衡P20Q80由120−2P等于20+3P推导",
+      "status": "derived",
+      "kind": "hypothetical_numerical_example",
+      "source_url": null,
+      "locator": "chapters/05.html",
+      "notes": "independently computed from stated model parameters"
+    },
+    {
+      "id": "model-1",
+      "claim": "需求右移对应P24Q92，供给右移对应P16Q88，两者各右移20对应P20Q100",
+      "status": "derived",
+      "kind": "hypothetical_numerical_example",
+      "source_url": null,
+      "locator": "chapters/05.html",
+      "notes": "independently computed from stated model parameters"
+    },
+    {
+      "id": "svgs",
+      "claim": "Original static SVG diagrams reproduce the numerical assumptions",
+      "status": "illustrative",
+      "kind": "figure",
+      "source_url": null,
+      "locator": "docs/assets/figures/",
+      "notes": "no external images copied"
+    }
+  ]
+}

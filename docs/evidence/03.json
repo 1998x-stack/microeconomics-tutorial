@@ -1,0 +1,50 @@
+{
+  "chapter": "03",
+  "claims": [
+    {
+      "id": "source-0",
+      "claim": "OpenStax · Demand, Supply and Equilibrium",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "source-1",
+      "claim": "OpenStax · Shifts in Demand and Supply",
+      "status": "verified",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services",
+      "locator": "linked textbook chapter",
+      "notes": "cross-check theory, not model data"
+    },
+    {
+      "id": "model-0",
+      "claim": "需求价格30对应Q60、价格20对应Q80；需求右移20在P20对应Q100",
+      "status": "derived",
+      "kind": "hypothetical_numerical_example",
+      "source_url": null,
+      "locator": "chapters/03.html",
+      "notes": "independently computed from stated model parameters"
+    },
+    {
+      "id": "model-1",
+      "claim": "四位买家支付意愿35、25、15、5在P20时有两位购买",
+      "status": "derived",
+      "kind": "hypothetical_numerical_example",
+      "source_url": null,
+      "locator": "chapters/03.html",
+      "notes": "independently computed from stated model parameters"
+    },
+    {
+      "id": "svgs",
+      "claim": "Original static SVG diagrams reproduce the numerical assumptions",
+      "status": "illustrative",
+      "kind": "figure",
+      "source_url": null,
+      "locator": "docs/assets/figures/",
+      "notes": "no external images copied"
+    }
+  ]
+}

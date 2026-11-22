@@ -1,0 +1,32 @@
+{
+  "chapter": "02",
+  "claims": [
+    {
+      "id": "source-0",
+      "claim": "OpenStax · Production Possibilities Frontier",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices",
+      "kind": "conceptual",
+      "status": "verified",
+      "locator": "linked textbook chapter",
+      "notes": "no source images copied"
+    },
+    {
+      "id": "source-1",
+      "claim": "OpenStax · Comparative Advantage",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/19-1-absolute-and-comparative-advantage",
+      "kind": "conceptual",
+      "status": "verified",
+      "locator": "linked textbook chapter",
+      "notes": "no source images copied"
+    },
+    {
+      "id": "math",
+      "claim": "All numerical examples use explicit hypothetical inputs, verified by arithmetic",
+      "kind": "calculation",
+      "status": "derived",
+      "source_url": null,
+      "locator": "chapters/02.html",
+      "notes": "hypothetical illustration"
+    }
+  ]
+}

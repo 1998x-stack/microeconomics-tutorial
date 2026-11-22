@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-REVISED = 10
+REVISED = 15
 
 class Page(HTMLParser):
     def __init__(self):
@@ -64,6 +64,8 @@ def main():
             assert page.figures == page.captions, f"{path} figure/caption mismatch"
             assert all(im.get("alt") for im in page.images), f"{path} missing alt"
             assert "javascript:void" not in content, path
+            assert "<mi></mi>" not in content and "<mn></mn>" not in content, f"{path} contains empty MathML tokens"
+            if index > 0: assert page.math_count > 0, f"{path} missing MathML"
             assert all(v[0] == 2 for v in page.frac_children), f"{path} mfrac requires 2 children"
         for url in page.links:
             if url.startswith(("https:", "http:", "mailto:", "data:", "javascript:")): continue
@@ -86,7 +88,7 @@ def main():
         assert all(c.get("locator") for c in evidence["claims"])
         assert (ROOT/f"{n}.html").is_file(), f"legacy link absent for {n}"
     figures=sorted((DOCS/"assets"/"figures").glob("*.svg"))
-    assert len(figures) == 20, f"expected 20 SVGs, found {len(figures)}"
+    assert len(figures) == 30, f"expected 30 SVGs, found {len(figures)}"
     for path in figures:
         root=ET.parse(path).getroot()
         assert root.tag.endswith("svg") and root.get("viewBox"), path
@@ -95,7 +97,7 @@ def main():
         ids=[x.attrib["id"] for x in root.iter() if "id" in x.attrib]
         assert len(ids)==len(set(ids)), f"duplicate SVG IDs: {path}"
         assert not any(x.tag.endswith("script") for x in root.iter()), f"SVG script: {path}"
-    print(f"PASS: 28 chapters, first {REVISED} reviewed, 20 SVGs, 10 evidence files, local links, MathML structure.")
+    print(f"PASS: 28 chapters, first {REVISED} reviewed, 30 SVGs, 15 evidence files, local links, MathML structure.")
     print("LEGACY NOTE: chapters 11–28 retained but not subject to deep editorial audit.")
 
 if __name__=="__main__":

@@ -1,0 +1,51 @@
+{
+  "chapter": "15",
+  "title": "垄断：市场势力与价格歧视",
+  "claims": [
+    {
+      "id": "barriers",
+      "claim": "Monopoly persistence is associated with legal, technological or market barriers to entry; natural monopoly may reflect scale economies over the relevant market range.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/9-1-how-monopolies-form-barriers-to-entry",
+      "locator": "section 9.1",
+      "status": "verified",
+      "notes": "monopoly itself is distinguished from anticompetitive conduct"
+    },
+    {
+      "id": "monopoly-choice",
+      "claim": "A single-price monopolist faces downward-sloping demand, has MR below price, and chooses output where MR=MC before reading price from demand.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/9-2-how-a-profit-maximizing-monopoly-chooses-output-and-price",
+      "locator": "section 9.2",
+      "status": "verified",
+      "notes": "differentiated from price-taking firm"
+    },
+    {
+      "id": "monopoly-model",
+      "claim": "For P=100−Q and MC20, Qm40 Pm60, Qc80 Pc20, monopoly CS800 PS1600 and DWL800.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "chapter 15 monopoly figure and algebra",
+      "status": "derived",
+      "notes": "linear demand, constant marginal cost, no fixed cost or externality"
+    },
+    {
+      "id": "third-degree",
+      "claim": "Group demands PA=80−QA and PB=60−0.5QB with MC20 imply discriminatory (QA,PA)=(30,50), (QB,PB)=(40,40).",
+      "kind": "derived",
+      "source_url": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-5-monopoly-and-oligopoly/monopoly-ii/",
+      "locator": "MIT OCW Monopoly II; chapter 15 worked example",
+      "status": "derived",
+      "notes": "price discrimination mechanism independently calculated; welfare comparison is model-specific"
+    },
+    {
+      "id": "price-discrimination-conditions",
+      "claim": "Market power, segmentation/self-selection and limited resale support price discrimination; third-degree pricing sets segment MRs equal to common MC.",
+      "kind": "conceptual",
+      "source_url": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-5-monopoly-and-oligopoly/monopoly-ii/",
+      "locator": "MIT OCW Monopoly II session overview and materials",
+      "status": "verified",
+      "notes": "conditions are model conditions; not every price difference is discrimination"
+    }
+  ]
+}

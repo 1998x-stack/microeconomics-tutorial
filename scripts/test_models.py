@@ -52,4 +52,72 @@ for p in [1,1.25,1.5,1.75,2]:
     eq((xs-3)+(xc-xs),xc-3)
     eq(xh*sqrt(18*p),18)
     eq((xs*p)+(3*p+6)/2,3*p+6)
-print("PASS: elasticity, tax incidence, consumer optimum, Hicks/Slutsky numerical identities.")
+
+# Chapter 11: production function, marginal products, isoquant and returns to scale.
+def production(L,K): return 2*(L*K)**(2/3)
+def mpl(L,K): return (4/3)*L**(-1/3)*K**(2/3)
+def mpk(L,K): return (4/3)*K**(-1/3)*L**(2/3)
+eq(production(8,8),32)
+eq(mpl(8,8),8/3); eq(mpk(8,8),8/3)
+eq(production(16,8)/production(8,8),2**(2/3))
+eq(production(16,16)/production(8,8),2**(4/3))
+eq((32/2)**(1.5),64)  # Q=32 isoquant: L*K=64.
+assert mpl(16,8)<mpl(8,8)<mpl(4,8)
+
+# Chapter 12: cost accounting and the shared short-run cost function.
+def vc(q): return q**3-6*q*q+15*q
+def tc(q): return 32+vc(q)
+def mc(q): return 3*q*q-12*q+15
+def avc(q): return vc(q)/q
+def atc(q): return tc(q)/q
+eq(1200-850,350)                # accounting profit, model currency units/year
+eq(1200-850-250-150,-50)        # economic profit
+eq(avc(3),6); eq(mc(3),6)
+eq(atc(4),15); eq(mc(4),15)
+eq(tc(4),60); eq(vc(4),28)
+eq(mc(2),3)
+
+# Chapter 13: competitive firm's upward-MC supply and shutdown decision.
+def comp_choice(price):
+    if price<6: return 0.0, -32.0
+    q=2+sqrt((price-3)/3)
+    return q, price*q-tc(q)
+q,profit=comp_choice(5); eq(q,0); eq(profit,-32)
+q,profit=comp_choice(6); eq(q,3); eq(profit,-32)
+q,profit=comp_choice(8); eq(q,2+sqrt(5/3)); eq(profit,-25.69668517088065)
+q,profit=comp_choice(15); eq(q,4); eq(profit,0)
+q,profit=comp_choice(18); eq(q,2+sqrt(5)); eq(profit,12.360679774997877)
+assert comp_choice(8)[1] > comp_choice(5)[1]  # operating loss is smaller than shutdown loss.
+
+# Chapter 14: constant-cost industry endpoint and competitive surplus example.
+for A,quantity,firms in [(100,40,10),(120,60,15)]:
+    eq(A-4*15,quantity); eq(quantity/4,firms)
+eq(80-40,20+0.5*40)
+eq(.5*40*(80-40),800)            # consumer surplus
+eq(.5*40*(40-20),400)            # producer surplus
+eq(800+400,1200)
+
+# Chapter 15: single-price monopoly, Lerner index, welfare and third-degree prices.
+qm=(100-20)/2; pm=100-qm; qc=100-20
+eq(qm,40); eq(pm,60); eq(qc,80)
+eq((pm-20)/pm,2/3); eq(1/(pm/qm),2/3)
+eq(.5*qm*(100-pm),800)           # monopoly consumer surplus
+eq((pm-20)*qm,1600)              # monopoly producer surplus
+eq(.5*(pm-20)*(qc-qm),800)       # monopoly deadweight loss
+eq(.5*qc*(100-20),3200)          # competitive total surplus
+# Uniform-price two-segment benchmark.
+pu=130/3; qau=80-pu; qbu=120-2*pu
+eq(qau+qbu,70)
+reu=pu*70
+csu=.5*qau*(80-pu)+.5*qbu*(60-pu)
+psu=reu-20*70
+eq(reu,9100/3); eq(csu,950); eq(psu,4900/3)
+# Third-degree discrimination: MR_A=MR_B=MC=20.
+qa=(80-20)/2; pa=80-qa
+qb=(60-20)/1; pb=60-.5*qb
+eq(qa,30); eq(pa,50); eq(qb,40); eq(pb,40)
+red=pa*qa+pb*qb; csd=.5*qa*(80-pa)+.5*qb*(60-pb); psd=red-20*(qa+qb)
+eq(red,3100); eq(csd,850); eq(psd,1700)
+eq((csd+psd)-(csu+psu),-100/3)
+
+print("PASS: elasticity, tax, consumer and producer theory, competition, welfare, monopoly and discrimination identities.")

@@ -1,0 +1,42 @@
+{
+  "chapter": "13",
+  "title": "完全竞争市场（上）：利润最大化",
+  "claims": [
+    {
+      "id": "perfect-competition",
+      "claim": "Price-taking firms operate under many buyers and sellers, homogeneous products, information and relatively free entry and exit.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-1-perfect-competition-and-why-it-matters",
+      "locator": "section 8.1",
+      "status": "verified",
+      "notes": "model assumptions, not a claim that all real markets satisfy them"
+    },
+    {
+      "id": "profit-max",
+      "claim": "A price-taking firm has P=MR=AR and chooses an interior profit maximum where P=MC on the increasing MC branch.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions",
+      "locator": "section 8.2",
+      "status": "verified",
+      "notes": "checked with the stated cost function"
+    },
+    {
+      "id": "shutdown",
+      "claim": "Short-run shutdown occurs below min AVC; losses between min AVC and min ATC can justify continuing production.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions",
+      "locator": "section 8.2 shutdown point",
+      "status": "verified",
+      "notes": "distinguishes shutdown from long-run exit"
+    },
+    {
+      "id": "firm-model",
+      "claim": "TC=32+q^3−6q²+15q; min AVC=6 at q3; min ATC=15 at q4; at P18 q=2+sqrt5 and profit≈12.3607.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "chapter 13 worked example and lab",
+      "status": "derived",
+      "notes": "shares the hypothetical cost function with chapter 12"
+    }
+  ]
+}

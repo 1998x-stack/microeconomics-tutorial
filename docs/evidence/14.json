@@ -1,0 +1,42 @@
+{
+  "chapter": "14",
+  "title": "完全竞争市场（下）：均衡与效率",
+  "claims": [
+    {
+      "id": "entry-exit",
+      "claim": "Under free entry and exit, positive economic profits attract entry and sustained losses induce exit; the process changes market supply.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-3-entry-and-exit-decisions-in-the-long-run",
+      "locator": "section 8.3",
+      "status": "verified",
+      "notes": "entry and exit are long-run adjustments"
+    },
+    {
+      "id": "competitive-efficiency",
+      "claim": "Under competitive assumptions and absent market failures, P=MC supports allocative efficiency; long-run entry and exit can bring price to minimum LRAC.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-4-efficiency-in-perfectly-competitive-markets",
+      "locator": "section 8.4",
+      "status": "verified",
+      "notes": "efficiency is conditional and distinct from equity"
+    },
+    {
+      "id": "market-surplus",
+      "claim": "For inverse demand 80−Q and MC 20+0.5Q, equilibrium Q40 P40, CS800 PS400 TS1200.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "chapter 14 efficiency figure and derivation",
+      "status": "derived",
+      "notes": "hypothetical linear market; no externalities"
+    },
+    {
+      "id": "constant-cost-lab",
+      "claim": "For demand Q=A−4P and long-run price15, per-firm q4, A100→120 implies long-run industry output40→60 and firms10→15.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "chapter 14 entry lab",
+      "status": "derived",
+      "notes": "constant-cost industry assumption; lab reports long-run endpoint"
+    }
+  ]
+}

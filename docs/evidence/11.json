@@ -1,0 +1,42 @@
+{
+  "chapter": "11",
+  "title": "生产函数：投入与产出",
+  "claims": [
+    {
+      "id": "production-function",
+      "claim": "Production maps input bundles to feasible output; short run fixes at least one input, long run allows all inputs to vary.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-2-production-in-the-short-run",
+      "locator": "section 7.2; short-run inputs",
+      "status": "verified",
+      "notes": "independently paraphrased"
+    },
+    {
+      "id": "long-run-production",
+      "claim": "Long-run production can vary labor and capital; isoquants collect input bundles producing a fixed output.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-4-production-in-the-long-run",
+      "locator": "section 7.4",
+      "status": "verified",
+      "notes": "see also MIT lecture summary"
+    },
+    {
+      "id": "toy-function",
+      "claim": "Q=2 L^(2/3) K^(2/3); with K=8, Q=8 L^(2/3), MPL=(16/3)L^(-1/3), increasing returns to scale exponent sum=4/3.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/11.html; docs/assets/figures/11-*.svg",
+      "status": "derived",
+      "notes": "hypothetical teaching function; diminishing MPL with fixed K coexists with increasing returns when both inputs scale"
+    },
+    {
+      "id": "isoquant",
+      "claim": "For Q=32, LK=64 and MRTS=K/L; along the isoquant MRTS declines as L rises.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "chapter 11 section isoquant",
+      "status": "derived",
+      "notes": "differentiated from the stated Cobb-Douglas function"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "chapter": "08",
+  "title": "消费者选择（上）：效用理论",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · Consumption Choices",
+      "kind": "conceptual_reference",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices",
+      "locator": "linked textbook chapter",
+      "notes": "explains conditions, independently authored"
+    },
+    {
+      "id": "textbook-2",
+      "claim": "OpenStax · Income and Price Changes",
+      "kind": "conceptual_reference",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-2-how-changes-in-income-and-prices-affect-consumption-choices",
+      "locator": "linked textbook chapter",
+      "notes": "explains conditions, independently authored"
+    },
+    {
+      "id": "textbook-3",
+      "claim": "OpenStax · Indifference Curves (Appendix)",
+      "kind": "conceptual_reference",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/b-indifference-curves",
+      "locator": "linked textbook chapter",
+      "notes": "explains conditions, independently authored"
+    },
+    {
+      "id": "worked-1",
+      "claim": "TU=12x−x² for integers0–6 gives marginal increments11,9,7,5,3,1",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "chapters/08.html",
+      "notes": "explicit hypothetical parameter verification"
+    },
+    {
+      "id": "worked-2",
+      "claim": "Utility U=√xy, Px2 Py1 I12 gives interior optimum(3,6) utility√18",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "chapters/08.html",
+      "notes": "explicit hypothetical parameter verification"
+    },
+    {
+      "id": "worked-3",
+      "claim": "Changing Px2 to Px1 with I12 Py1 yields optimum(6,6), utility6",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "chapters/08.html",
+      "notes": "explicit hypothetical parameter verification"
+    },
+    {
+      "id": "figures",
+      "claim": "Two independently drawn SVGs show diminishing marginal utility and budget optimum",
+      "kind": "illustrative",
+      "status": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/08-*.svg",
+      "notes": "original vector diagrams"
+    }
+  ]
+}

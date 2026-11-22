@@ -52,4 +52,9 @@ document.querySelectorAll('[data-lab="surplus"]').forEach(root=>{
  const update=()=>{const a=+A.value,p=(a+20)/2,q=(a-20)/2,cs=0.5*(a-p)*q,ps=0.5*(p-20)*q;out(root,'a',a);v.textContent='均衡 Q*='+n(q,1)+'，P*='+n(p,1)+'；CS='+n(cs,0)+'，PS='+n(ps,0)+'，总剩余='+n(cs+ps,0)+'。';};
  hook(root,[A],update);
 });
+document.querySelectorAll('[data-lab="monopoly"]').forEach(root=>{
+ const M=root.querySelector('[data-mc]'),v=root.querySelector('[data-result]');
+ const update=()=>{const mc=+M.value,qm=(100-mc)/2,pm=(100+mc)/2,profit=(pm-mc)*qm,qc=100-mc,dwl=0.5*(pm-mc)*(qc-qm);out(root,'mc',mc);v.textContent='Qm='+n(qm,1)+'，Pm='+n(pm,1)+'，利润='+n(profit,0)+'；竞争产量 Qc='+n(qc,1)+'，无谓损失='+n(dwl,0)+'。';};
+ hook(root,[M],update);
+});
 })();

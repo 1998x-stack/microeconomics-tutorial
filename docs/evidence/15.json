@@ -1,0 +1,51 @@
+{
+  "chapter": "15",
+  "title": "垄断：市场势力与价格歧视",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · Ch. 7 Introduction to Production, Costs, and Industry Structure（成本与边际收益，作为垄断定价分析的基础）",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-introduction-to-production-costs-and-industry-structure",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 7 章导言（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "独立讲解，未复制图形；垄断与价格歧视的标准处理另见该教材市场结构部分"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：需求 P=100−Q 时 TR=100Q−Q²，故 MR=100−2Q，斜率是需求的两倍",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/15.html #mr",
+      "status": "derived",
+      "notes": "对总收益求导得到"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "MR=MC=20 得 Qm=40、Pm=60，垄断利润 = (60−20)×40 = 1600",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/15.html #pricing",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "完全竞争 P=MC=20 得 Qc=80；消费者剩余由 3200 降为 800；无谓损失 = (60−20)×(80−40)/2 = 800",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/15.html #dwl",
+      "status": "derived",
+      "notes": "三角形面积与剩余计算"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现垄断定价与无谓损失",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/15-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

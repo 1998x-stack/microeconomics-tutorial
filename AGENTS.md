@@ -39,7 +39,7 @@ Follow `https://github.com/1998x-stack/Olah-style-posts/tree/main/skills/olah-st
 - Chapter 09: for the same Cobb–Douglas model MRS=y/x and budget slope −Px/Py=−2. A smooth tangency does not universally hold at corners or kinks. Price drop Px2→1 rotates the budget and gives C=(6,6).
 - Chapter 10: old A=(3,6), new C=(6,6). Hicks B=(√18,√18) at compensated income 2√18; Slutsky B=(4.5,4.5) at compensated income 9. Total Δx=3 in both decompositions, components differ. Cobb–Douglas here implies normal goods; **do not depict Giffen behavior as derived from it**. For documented Giffen evidence cite Jensen & Miller (2008) with population and finding scope.
 - Every new lab must function without network access, with live ARIA status, labeled native controls and a deterministic smoke test. Static figures carry the entire explanatory claim if JS is disabled.
-- QA now covers chapters 01–10. Never mark 11–28 as reviewed, and do not weaken a failing test to make CI pass.
+- QA now covers chapters 01–15. Never mark 16–28 as reviewed, and do not weaken a failing test to make CI pass.
 
 
 ## Producer and market-structure numerical canon (chapters 11–15)

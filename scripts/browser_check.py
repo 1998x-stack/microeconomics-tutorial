@@ -51,6 +51,25 @@ def test_demo(page,name):
         set_value(page.locator('[data-lab="decomposition"] [data-new-price]'),1.5)
         actual=page.locator('[data-result]').inner_text()
         assert "B_x=3.5" in actual and "C_x=4" in actual, actual
+    elif name=="chapters/11":
+        set_value(page.locator('[data-lab="production"] [data-labor]'),16)
+        assert "Q=50.797" in page.locator('[data-result]').inner_text()
+    elif name=="chapters/12":
+        set_value(page.locator('[data-lab="costs"] [data-output]'),5)
+        assert "ATC=16.4" in page.locator('[data-result]').inner_text()
+    elif name=="chapters/13":
+        set_value(page.locator('[data-lab="competition"] [data-firm-price]'),5)
+        assert "停产 q=0" in page.locator('[data-result]').inner_text()
+        set_value(page.locator('[data-lab="competition"] [data-firm-price]'),8)
+        assert "利润π=-25.697" in page.locator('[data-result]').inner_text()
+    elif name=="chapters/14":
+        set_value(page.locator('[data-lab="entry"] [data-demand-intercept]'),120)
+        assert "需要15家企业" in page.locator('[data-result]').inner_text()
+    elif name=="chapters/15":
+        set_value(page.locator('[data-lab="monopoly"] [data-monopoly-mc]'),30)
+        assert "垄断：Q=35" in page.locator('[data-result]').inner_text()
+        page.locator('[data-lab="discrimination"] [data-pricing]').select_option("segment")
+        assert "收入3100" in page.locator('[data-lab="discrimination"] [data-result]').inner_text()
 
 with Server(("127.0.0.1",PORT),QuietHandler) as server:
     threading.Thread(target=server.serve_forever,daemon=True).start()
@@ -62,7 +81,7 @@ with Server(("127.0.0.1",PORT),QuietHandler) as server:
             page=context.new_page()
             page.on("pageerror",lambda err:ERRORS.append(str(err)))
             page.on("console",lambda m:ERRORS.append(m.text) if m.type=="error" else None)
-            names=["index"]+[f"chapters/{i:02}" for i in range(1,11)]
+            names=["index"]+[f"chapters/{i:02}" for i in range(1,16)]
             for name in names:
                 response=page.goto(f"{ROOT}/{name}.html",wait_until="networkidle")
                 assert response and response.status==200, name
@@ -96,7 +115,7 @@ with Server(("127.0.0.1",PORT),QuietHandler) as server:
                     ),f"diagram nonzero render: {name}"
                     if name not in ("chapters/01","chapters/02"):test_demo(page,name)
                 CHECKS.append({"page":name,"viewport":label,"status":"passed"})
-                if label in ("desktop","mobile390") and name in ("index","chapters/06","chapters/07","chapters/09","chapters/10"):
+                if label in ("desktop","mobile390") and name in ("index","chapters/06","chapters/07","chapters/09","chapters/10","chapters/11","chapters/12","chapters/13","chapters/14","chapters/15"):
                     page.screenshot(path=str(OUTPUT/f"{name.replace('/','-')}-{label}.png"),full_page=True)
             context.close()
         page=browser.new_page(viewport={"width":390,"height":844})
@@ -110,11 +129,11 @@ with Server(("127.0.0.1",PORT),QuietHandler) as server:
         page.emulate_media(media="print")
         assert page.locator("figure img").first.is_visible(), "print figure hidden"
         page.screenshot(path=str(OUTPUT/"chapter02-print.png"),full_page=True)
-        page.goto(f"{ROOT}/chapters/10.html",wait_until="networkidle")
+        page.goto(f"{ROOT}/chapters/15.html",wait_until="networkidle")
         page.emulate_media(media="print")
         assert page.locator("figure img").first.is_visible()
-        page.screenshot(path=str(OUTPUT/"chapter10-print.png"),full_page=True)
-        for svg in ("06-price-elasticity","07-tax-wedge","08-utility-budget","09-budget-rotation","10-hicks-decomposition"):
+        page.screenshot(path=str(OUTPUT/"chapter15-print.png"),full_page=True)
+        for svg in ("06-price-elasticity","07-tax-wedge","08-utility-budget","09-budget-rotation","10-hicks-decomposition","11-production-curve","12-short-run-costs","13-price-taking-firm","14-entry-exit","15-monopoly-welfare"):
             response=page.goto(f"{ROOT}/assets/figures/{svg}.svg",wait_until="load")
             assert response and response.status==200, svg
             assert page.locator("svg").count()==1
@@ -126,6 +145,6 @@ with Server(("127.0.0.1",PORT),QuietHandler) as server:
 assert not ERRORS, f"JavaScript console/page errors: {ERRORS}"
 report={"status":"passed","cases":len(CHECKS),"checks":CHECKS,"errors":ERRORS,
         "viewports":["1440x900","768x1024","390x844","360x800"],
-        "extra":["MathML fraction geometry","keyboard focus","print 02 and 10","standalone SVG render","all interactive labs"]}
+        "extra":["MathML fraction geometry","keyboard focus","print 02 and 15","standalone SVG render","all interactive labs"]}
 (OUTPUT/"report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
-print(f"PASS: {len(CHECKS)} browser cases; 11 pages×4 viewports, 5 standalone SVGs, MathML, search, interactions, print.")
+print(f"PASS: {len(CHECKS)} browser cases; 16 pages×4 viewports, 10 standalone SVGs, MathML, search, interactions, print.")

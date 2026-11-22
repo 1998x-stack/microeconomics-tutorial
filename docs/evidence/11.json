@@ -1,0 +1,60 @@
+{
+  "chapter": "11",
+  "title": "生产函数：投入与产出",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · Ch. 7 Introduction to Production, Costs, and Industry Structure（生产函数、边际报酬递减、短期与长期）",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-introduction-to-production-costs-and-industry-structure",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 7 章导言（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "independent explanation, no reproduced figures"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例短期生产函数 Q(L)=3L²−0.1L³（固定资本 K̄=1）",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/11.html #function",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "TP/AP/MP 的取值：L=5→62.5/12.5/22.5；L=10→200/20/30；L=15→337.5/22.5/22.5；L=20→400/20/0；L=25→312.5/12.5/−37.5",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/11.html #tp-ap-mp 表格",
+      "status": "derived",
+      "notes": "AP=Q/L，MP=Q′(L)=6L−0.3L²；直接代入计算"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "MP 在 L=10 达到最高 30；AP 在 L=15 达到最高 22.5 且此刻 MP=AP；总产量在 L=20 达到峰值 400 且 MP=0",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/11.html #mp-ap",
+      "status": "derived",
+      "notes": "由 dAP/dL=(MP−AP)/L 与 Q′(L)=0 直接求得"
+    },
+    {
+      "id": "derivation-4",
+      "claim": "柯布–道格拉斯 Q=A·L^a·K^b 的规模报酬由指数和 a+b 判定：>1 递增，=1 不变，<1 递减",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "docs/chapters/11.html #returns",
+      "status": "derived",
+      "notes": "把 f(λL,λK)=λ^(a+b)f(L,K) 提出 λ 得到"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现本章教学示例的数值关系",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/11-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

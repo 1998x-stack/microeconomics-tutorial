@@ -32,4 +32,9 @@ document.querySelectorAll('[data-lab="decomposition"]').forEach(root=>{
  const update=()=>{const p=+price.value,old=3,final=6/p,u=Math.sqrt(18),h=method.value==='hicks';const middle=h?Math.sqrt(18/p):(3*p+6)/(2*p);const budget=h?2*Math.sqrt(18*p):3*p+6;out(root,'new-price',p);v.textContent=(h?'Hicks 希克斯':'Slutsky 斯勒茨基')+'：A_x=3，B_x='+n(middle,3)+'，C_x='+n(final,3)+'；替代效应 '+(middle-old>=0?'+':'')+n(middle-old,3)+'，收入效应 '+(final-middle>=0?'+':'')+n(final-middle,3)+'，总效应 '+(final-old>=0?'+':'')+n(final-old,3)+'；虚拟补偿预算='+n(budget,3)+'元。'};
  hook(root,[price,method],update);
 });
+document.querySelectorAll('[data-lab="production"]').forEach(root=>{
+ const L=root.querySelector('[data-labor]'),v=root.querySelector('[data-result]');
+ const update=()=>{const l=+L.value,q=3*l*l-0.1*l*l*l,ap=l?q/l:0,mp=6*l-0.3*l*l;out(root,'labor',l);const stage=l===0?'尚无投入，产量为 0':(mp>ap?'MP>AP，AP 仍在上升':mp<ap?'MP<AP，AP 已在下降':'MP=AP，AP 达到最高');v.textContent='L='+l+'：Q='+n(q,2)+'，AP='+n(ap,2)+'，MP='+n(mp,2)+'；'+stage+'。'+(mp<0?'已进入负边际报酬，总产量下降。':'');};
+ hook(root,[L],update);
+});
 })();

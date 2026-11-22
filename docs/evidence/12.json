@@ -1,0 +1,42 @@
+{
+  "chapter": "12",
+  "title": "成本分析：会计师 vs 经济学家",
+  "claims": [
+    {
+      "id": "economic-profit",
+      "claim": "Accounting profit subtracts explicit costs; economic profit also subtracts implicit opportunity costs.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit",
+      "locator": "section 7.1",
+      "status": "verified",
+      "notes": "teaching numbers independently chosen"
+    },
+    {
+      "id": "short-run-costs",
+      "claim": "FC, VC, TC, AVC, AFC, ATC and MC have distinct total/per-unit definitions; marginal cost intersects smooth average curves at minima.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+      "locator": "section 7.3; average and marginal costs",
+      "status": "verified",
+      "notes": "cost function is not copied from source"
+    },
+    {
+      "id": "long-run-costs",
+      "claim": "Long run allows adjustment of all inputs; LRAC is based on choosing the lowest-cost technology and scale.",
+      "kind": "conceptual",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-5-costs-in-the-long-run",
+      "locator": "section 7.5",
+      "status": "verified",
+      "notes": "scale economy vs diminishing marginal product distinguished"
+    },
+    {
+      "id": "cost-model",
+      "claim": "TC=32+q^3−6q²+15q; AVC minimum 6 at q3, ATC minimum 15 at q4, MC crosses both minima.",
+      "kind": "derived",
+      "source_url": null,
+      "locator": "chapter 12 formulas and cost-curve SVGs",
+      "status": "derived",
+      "notes": "hypothetical smooth cost function; q in batches and cost in model currency units"
+    }
+  ]
+}

@@ -13,15 +13,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Source checks
+      - name: Validate pages, MathML, SVG and links
         run: python scripts/validate_site.py
+      - name: Verify economic derivations
+        run: python scripts/test_models.py
       - name: Install Playwright Chromium
         run: |
           python -m pip install playwright
           python -m playwright install --with-deps chromium
-      - name: Browser checks
+      - name: Browser checks on desktop, tablet, mobile and print
         run: python scripts/browser_check.py
-      - name: Save QA captures
+      - name: Save browser QA captures
         if: always()
         uses: actions/upload-artifact@v4
         with:

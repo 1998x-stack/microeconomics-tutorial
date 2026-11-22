@@ -1,0 +1,60 @@
+{
+  "chapter": "13",
+  "title": "完全竞争市场（上）：利润最大化",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · Ch. 7 Introduction to Production, Costs, and Industry Structure（成本、平均成本与边际成本，作为利润最大化的基础）",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-introduction-to-production-costs-and-industry-structure",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 7 章导言（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "独立讲解，未复制图形；完全竞争的标准处理另见该教材市场结构部分"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：TC=200+20Q+5Q²，MC=20+10Q；P=40 时 P=MC 给出 Q*=2",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/13.html #mr-mc",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "Q*=2 时 TR=80、TC=260、利润 −180；停业则利润 −200；AVC(2)=30<P=40，故继续生产",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/13.html #short-run",
+      "status": "derived",
+      "notes": "直接代入计算"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "ATC 最低在 Q≈6.32 处约为 83.2；AVC=20+5Q 的最低点在本模型边界 Q=0 处为 20（停业价）",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/13.html #supply-curve",
+      "status": "derived",
+      "notes": "由 AVC/ATC 与 MC 的极值条件求得"
+    },
+    {
+      "id": "derivation-4",
+      "claim": "短期供给示例：P=100 时 Q=8、ATC=85 盈利；P=60 时 Q=4、ATC=90 亏损但 P>AVC=40；P<20 停产",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/assets/figures/13-short-run-supply.svg",
+      "status": "derived",
+      "notes": "同一成本函数下的三档价格"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现 P=MR=MC 与短期供给曲线",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/13-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

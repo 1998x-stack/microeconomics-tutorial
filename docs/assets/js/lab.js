@@ -42,4 +42,9 @@ document.querySelectorAll('[data-lab="cost"]').forEach(root=>{
  const update=()=>{const q=+Q.value,tvc=20*q-3*q*q+0.5*q*q*q,tc=100+tvc,mc=20-6*q+1.5*q*q,atc=tc/q,avc=tvc/q;out(root,'qty',q);const rel=mc<atc?'MC<ATC，ATC 仍在下降':mc>atc?'MC>ATC，ATC 已上升':'MC=ATC，ATC 到最低点';const relv=mc<avc?'AVC 仍在下降':mc>avc?'AVC 已上升':'AVC 到最低点';v.textContent='Q='+n(q,1)+'：TC='+n(tc,1)+'，MC='+n(mc,1)+'，ATC='+n(atc,1)+'，AVC='+n(avc,1)+'；'+rel+'；'+relv+'。';};
  hook(root,[Q],update);
 });
+document.querySelectorAll('[data-lab="firm"]').forEach(root=>{
+ const P=root.querySelector('[data-price]'),v=root.querySelector('[data-result]');
+ const update=()=>{const p=+P.value;out(root,'price',p);let txt;if(p<=20){txt='P='+p+'：Q*=0（P ≤ AVC 最低点 20），利润=-200，短期应停产。';}else{const q=(p-20)/10,tc=200+20*q+5*q*q,profit=p*q-tc,atc=tc/q,avc=20+5*q;txt='P='+p+'：Q*='+n(q,2)+'，AVC='+n(avc,1)+'，ATC='+n(atc,1)+'，利润='+n(profit,0)+'；'+(profit>=0?'盈利，继续生产。':'亏损但 P>AVC，继续生产。');}v.textContent=txt;};
+ hook(root,[P],update);
+});
 })();

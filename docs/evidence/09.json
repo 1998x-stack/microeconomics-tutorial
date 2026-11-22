@@ -1,0 +1,78 @@
+{
+  "chapter": "09",
+  "title": "消费者选择（下）：无差异曲线",
+  "claims": [
+    {
+      "id": "source-1",
+      "claim": "OpenStax · Appendix B Indifference Curves",
+      "kind": "conceptual",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/b-indifference-curves",
+      "locator": "linked textbook section",
+      "notes": "assumptions distinguished from facts"
+    },
+    {
+      "id": "source-2",
+      "claim": "OpenStax · Consumption Choices",
+      "kind": "conceptual",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices",
+      "locator": "linked textbook section",
+      "notes": "assumptions distinguished from facts"
+    },
+    {
+      "id": "source-3",
+      "claim": "OpenStax · How Income and Prices Affect Choices",
+      "kind": "conceptual",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-2-how-changes-in-income-and-prices-affect-consumption-choices",
+      "locator": "linked textbook section",
+      "notes": "assumptions distinguished from facts"
+    },
+    {
+      "id": "example-1",
+      "claim": "U=√xy的U=√18无差异曲线满足xy=18",
+      "kind": "derived",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/09.html worked examples",
+      "notes": "hypothetical Cobb Douglas model"
+    },
+    {
+      "id": "example-2",
+      "claim": "2x+y=12与MRS=y/x=2联立得最优(3,6)",
+      "kind": "derived",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/09.html worked examples",
+      "notes": "hypothetical Cobb Douglas model"
+    },
+    {
+      "id": "example-3",
+      "claim": "消费者预算I16时最优(4,8)",
+      "kind": "derived",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/09.html worked examples",
+      "notes": "hypothetical Cobb Douglas model"
+    },
+    {
+      "id": "example-4",
+      "claim": "Px2变Px1且I12不变时最优从(3,6)变成(6,6)",
+      "kind": "derived",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/09.html worked examples",
+      "notes": "hypothetical Cobb Douglas model"
+    },
+    {
+      "id": "figures",
+      "claim": "Two original diagrams show tangency and budget pivot",
+      "kind": "figure",
+      "status": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/09-*.svg",
+      "notes": "independently drawn"
+    }
+  ]
+}

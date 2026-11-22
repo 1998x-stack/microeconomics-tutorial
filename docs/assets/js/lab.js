@@ -1,1 +1,35 @@
-(()=>{'use strict';document.querySelectorAll('[data-lab="market"]').forEach(root=>{const price=root.querySelector('[data-price]'),shiftD=root.querySelector('[data-demand]'),shiftS=root.querySelector('[data-supply]'),info=root.querySelector('[data-result]'),nums=root.querySelectorAll('[data-output]');const update=()=>{const p=Number(price.value),d=Number(shiftD.value),s=Number(shiftS.value);const qd=Math.max(0,120+d-2*p),qs=Math.max(0,20+s+3*p),pe=(100+d-s)/5,qe=120+d-2*pe;nums.forEach(o=>{const key=o.dataset.output;o.textContent=({price:p,demand:d,supply:s})[key]});const gap=qs-qd;let state=gap>0?'供给过剩 '+gap:gap<0?'市场短缺 '+(-gap):'恰好出清';info.textContent='在价格 '+p+' 下：需求量 '+qd+'、供给量 '+qs+'；'+state+'。给定曲线的均衡为 P* = '+pe.toFixed(1)+'，Q* = '+qe.toFixed(1)+'。'};[price,shiftD,shiftS].forEach(el=>el.addEventListener('input',update));update()})})();
+(()=>{'use strict';
+const out=(root,key,v)=>root.querySelectorAll('[data-out="'+key+'"]').forEach(el=>{el.textContent=String(v)});
+const n=(x,d=2)=>Number(x.toFixed(d)).toString();
+const hook=(root,controls,update)=>{controls.forEach(c=>c.addEventListener('input',update));controls.forEach(c=>c.addEventListener('change',update));update()};
+document.querySelectorAll('[data-lab="market"]').forEach(root=>{
+ const p=root.querySelector('[data-price]'),d=root.querySelector('[data-demand]'),s=root.querySelector('[data-supply]'),v=root.querySelector('[data-result]');
+ const update=()=>{let P=+p.value,D=+d.value,S=+s.value,qd=Math.max(0,120+D-2*P),qs=Math.max(0,20+S+3*P),pe=(100+D-S)/5,qe=120+D-2*pe;root.querySelectorAll('[data-output]').forEach(e=>{e.textContent=({price:P,demand:D,supply:S})[e.dataset.output]});let gap=qs-qd;v.textContent='价格'+P+'：需求'+qd+'，供给'+qs+'；'+(gap>0?'过剩'+gap:gap<0?'短缺'+(-gap):'恰好出清')+'。均衡 P*='+n(pe,1)+'，Q*='+n(qe,1)+'。'};
+ hook(root,[p,d,s],update);
+});
+document.querySelectorAll('[data-lab="elasticity"]').forEach(root=>{
+ const p=root.querySelector('[data-price]'),v=root.querySelector('[data-result]');
+ const update=()=>{const P=+p.value,Q=120-2*P,e=2*P/Q,rev=P*Q;out(root,'price',P);v.textContent='P='+P+'元，Q='+Q+'件，需求点弹性绝对值 |ε|='+n(e,3)+'（'+(e<1?'缺乏弹性':e>1?'富有弹性':'单位弹性')+'），TR='+rev+'元。'};
+ hook(root,[p],update);
+});
+document.querySelectorAll('[data-lab="tax"]').forEach(root=>{
+ const t=root.querySelector('[data-tax]'),v=root.querySelector('[data-result]');
+ const update=()=>{const a=+t.value,pc=20+.6*a,pp=20-.4*a,q=80-1.2*a,rev=a*q,dwl=.6*a*a;out(root,'tax',a);v.textContent='税率 t='+a+'元，买方价 Pc='+n(pc,2)+'，卖方净价 Pp='+n(pp,2)+'，成交 Q='+n(q,2)+'，税收收入='+n(rev,2)+'，无谓损失='+n(dwl,2)+'。'};
+ hook(root,[t],update);
+});
+document.querySelectorAll('[data-lab="utility"]').forEach(root=>{
+ const p=root.querySelector('[data-px]'),v=root.querySelector('[data-result]');
+ const update=()=>{const price=+p.value,x=6/price,y=6;out(root,'px',price);v.textContent='Px='+price+'元，最优 x='+n(x,3)+'、y='+y+'，总支出='+n(price*x+y,2)+'，U=√(xy)='+n(Math.sqrt(x*y),3)+'。'};
+ hook(root,[p],update);
+});
+document.querySelectorAll('[data-lab="indifference"]').forEach(root=>{
+ const input=root.querySelector('[data-income]'),v=root.querySelector('[data-result]');
+ const update=()=>{const I=+input.value,x=I/4,y=I/2;out(root,'income',I);v.textContent='预算 I='+I+'元，最优 x='+n(x,3)+'、y='+n(y,3)+'，U=√(xy)='+n(Math.sqrt(x*y),3)+'，预算支出='+I+'。'};
+ hook(root,[input],update);
+});
+document.querySelectorAll('[data-lab="decomposition"]').forEach(root=>{
+ const price=root.querySelector('[data-new-price]'),method=root.querySelector('[data-method]'),v=root.querySelector('[data-result]');
+ const update=()=>{const p=+price.value,old=3,final=6/p,u=Math.sqrt(18),h=method.value==='hicks';const middle=h?Math.sqrt(18/p):(3*p+6)/(2*p);const budget=h?2*Math.sqrt(18*p):3*p+6;out(root,'new-price',p);v.textContent=(h?'Hicks 希克斯':'Slutsky 斯勒茨基')+'：A_x=3，B_x='+n(middle,3)+'，C_x='+n(final,3)+'；替代效应 '+(middle-old>=0?'+':'')+n(middle-old,3)+'，收入效应 '+(final-middle>=0?'+':'')+n(final-middle,3)+'，总效应 '+(final-old>=0?'+':'')+n(final-old,3)+'；虚拟补偿预算='+n(budget,3)+'元。'};
+ hook(root,[price,method],update);
+});
+})();

@@ -1,0 +1,69 @@
+{
+  "chapter": "06",
+  "title": "弹性：衡量市场反应",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · 5.1 Price Elasticity of Demand and Supply",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply",
+      "locator": "linked OpenStax textbook section",
+      "status": "verified",
+      "notes": "independent explanation, no reproduced figures"
+    },
+    {
+      "id": "textbook-2",
+      "claim": "OpenStax · 5.3 Elasticity and Pricing",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-3-elasticity-and-pricing",
+      "locator": "linked OpenStax textbook section",
+      "status": "verified",
+      "notes": "independent explanation, no reproduced figures"
+    },
+    {
+      "id": "textbook-3",
+      "claim": "OpenStax · 5.4 Elasticity Beyond Price",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-4-elasticity-in-areas-other-than-price",
+      "locator": "linked OpenStax textbook section",
+      "status": "verified",
+      "notes": "independent explanation, no reproduced figures"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "中点弹性从(P20,Q80)至(P30,Q60)约−0.7143",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/06.html worked model",
+      "status": "derived",
+      "notes": "direct arithmetic, hypothetical parameters"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "线性需求Q=120−2P在P20/30/40点弹性绝对值0.5/1/2",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/06.html worked model",
+      "status": "derived",
+      "notes": "direct arithmetic, hypothetical parameters"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "同一线性需求价格20/30/40总收入1600/1800/1600",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/06.html worked model",
+      "status": "derived",
+      "notes": "direct arithmetic, hypothetical parameters"
+    },
+    {
+      "id": "figures",
+      "claim": "2 original standalone SVGs reproduce numerical assumptions",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/06-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

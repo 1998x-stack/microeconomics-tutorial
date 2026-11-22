@@ -1,0 +1,78 @@
+{
+  "chapter": "07",
+  "title": "政府政策：税收、补贴与管制",
+  "claims": [
+    {
+      "id": "concept-1",
+      "claim": "OpenStax §3.4 Price Ceilings and Price Floors",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-4-price-ceilings-and-price-floors",
+      "locator": "linked OpenStax textbook section",
+      "kind": "conceptual",
+      "status": "verified",
+      "notes": "concept only, no source figures copied"
+    },
+    {
+      "id": "concept-2",
+      "claim": "OpenStax §3.5 Demand, Supply and Efficiency",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-5-demand-supply-and-efficiency",
+      "locator": "linked OpenStax textbook section",
+      "kind": "conceptual",
+      "status": "verified",
+      "notes": "concept only, no source figures copied"
+    },
+    {
+      "id": "concept-3",
+      "claim": "OpenStax §5.3 Tax Incidence and Elasticity",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-3-elasticity-and-pricing",
+      "locator": "linked OpenStax textbook section",
+      "kind": "conceptual",
+      "status": "verified",
+      "notes": "concept only, no source figures copied"
+    },
+    {
+      "id": "case-1",
+      "claim": "上限15产生需求90供给65短缺25",
+      "source_url": null,
+      "locator": "chapters/07.html worked algebra",
+      "kind": "computed_teaching_example",
+      "status": "derived",
+      "notes": "arithmetic verified on hypothetical linear functions"
+    },
+    {
+      "id": "case-2",
+      "claim": "下限25产生需求70供给95过剩25",
+      "source_url": null,
+      "locator": "chapters/07.html worked algebra",
+      "kind": "computed_teaching_example",
+      "status": "derived",
+      "notes": "arithmetic verified on hypothetical linear functions"
+    },
+    {
+      "id": "case-3",
+      "claim": "税率5使Pc23 Pp18 Q74 税收370 DWL15",
+      "source_url": null,
+      "locator": "chapters/07.html worked algebra",
+      "kind": "computed_teaching_example",
+      "status": "derived",
+      "notes": "arithmetic verified on hypothetical linear functions"
+    },
+    {
+      "id": "case-4",
+      "claim": "税率10使Pc26 Pp16 Q68 税收680 DWL60",
+      "source_url": null,
+      "locator": "chapters/07.html worked algebra",
+      "kind": "computed_teaching_example",
+      "status": "derived",
+      "notes": "arithmetic verified on hypothetical linear functions"
+    },
+    {
+      "id": "figs",
+      "claim": "Price-control and tax-wedge figures depict the same linear market",
+      "source_url": null,
+      "locator": "docs/assets/figures/07-*.svg",
+      "kind": "illustrative",
+      "status": "illustrative",
+      "notes": "original SVGs"
+    }
+  ]
+}

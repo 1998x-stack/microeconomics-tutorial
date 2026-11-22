@@ -67,7 +67,7 @@ def test_demo(page,name):
         assert "需要15家企业" in page.locator('[data-result]').inner_text()
     elif name=="chapters/15":
         set_value(page.locator('[data-lab="monopoly"] [data-monopoly-mc]'),30)
-        assert "垄断：Q=35" in page.locator('[data-result]').inner_text()
+        assert "垄断：Q=35" in page.locator('[data-lab="monopoly"] [data-result]').inner_text()
         page.locator('[data-lab="discrimination"] [data-pricing]').select_option("segment")
         assert "收入3100" in page.locator('[data-lab="discrimination"] [data-result]').inner_text()
 

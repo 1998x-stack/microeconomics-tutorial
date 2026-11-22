@@ -61,7 +61,7 @@ eq(production(8,8),32)
 eq(mpl(8,8),8/3); eq(mpk(8,8),8/3)
 eq(production(16,8)/production(8,8),2**(2/3))
 eq(production(16,16)/production(8,8),2**(4/3))
-eq((64/2)**(1.5),64)  # Q=32 isoquant: L*K=64.
+eq((32/2)**(1.5),64)  # Q=32 isoquant: L*K=64.
 assert mpl(16,8)<mpl(8,8)<mpl(4,8)
 
 # Chapter 12: cost accounting and the shared short-run cost function.

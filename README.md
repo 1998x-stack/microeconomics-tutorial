@@ -6,9 +6,9 @@
 
 ## 当前进度
 
-- **01–10**：两轮深度重构，篇篇独立成文；共 20 张原创 SVG、MathML、可检查的数值实例、10 份证据记录，以及第 03–10 章的确定性交互实验。
-- **11–28**：保留原版 HTML 及导航，尚未完成同等深度的经济学和网页审查。
-- 推荐路线：稀缺与边际选择 → 比较优势 → 需求与供给 → 弹性与政策 → 效用与无差异曲线 → 收入与替代效应。
+- **01–15**：三轮深度重构，篇篇独立成文；共 30 张原创 SVG、MathML、可核算的数值模型、15 份证据记录，以及第 03–15 章的确定性交互实验。
+- **16–28**：保留原版 HTML 及导航，尚未完成同等深度的经济学与网页审查。
+- 推荐路线：稀缺与比较优势 → 需求供给与弹性 → 消费者选择 → 生产函数与成本 → 完全竞争 → 长期均衡与效率 → 垄断与价格歧视。
 - 每个教学模型使用明确声明的假设参数，允许读者独立核算，不能当作真实观测数据。
 
 ## 项目结构
@@ -18,15 +18,15 @@
 ├── docs/
 │   ├── index.html                  # GitHub Pages 课程首页
 │   ├── chapters/
-│   │   ├── 01.html … 10.html       # 两批精修，每篇有两张SVG
-│   │   ├── 11.html … 28.html       # 原始课程兼容迁移
+│   │   ├── 01.html … 15.html       # 三批精修，每篇两张原创SVG
+│   │   ├── 16.html … 28.html       # 原版课程兼容迁移
 │   │   ├── index.html              # 旧版章节返回目录链接兼容
 │   │   └── theme.css               # 旧章节样式兼容
 │   ├── assets/
 │   │   ├── css/site.css
 │   │   ├── js/lab.js
 │   │   └── figures/*.svg
-│   └── evidence/01.json … 10.json
+│   └── evidence/01.json … 15.json
 ├── scripts/validate_site.py
 ├── scripts/browser_check.py
 ├── scripts/test_models.py
@@ -36,8 +36,8 @@
 ├── AGENTS.md
 ├── README.md
 ├── index.html                     # 旧首页跳转到 docs/
-├── 01.html … 10.html              # 旧章节稳定跳转到新路径
-└── 11.html … 28.html              # 旧地址兼容保留
+├── 01.html … 15.html              # 旧章节稳定跳转到新路径
+└── 16.html … 28.html              # 原版入口兼容保留
 ```
 
 ## 本地阅读与测试
@@ -57,12 +57,17 @@ python3 scripts/browser_check.py
 
 ## 内容和证据
 
-前十章的模型数据均是教学示例，不是现实市场的统计。图解均为独立绘制，不使用 OpenStax 或 CORE Econ 的受版权保护图形。引述参考：
+前十五章的模型数据均是教学示例，不是现实市场的统计。图解均为独立绘制，不使用 OpenStax 或 CORE Econ 的受版权保护图形。引述参考：
 
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 2](https://openstax.org/books/principles-microeconomics-3e/pages/2-introduction-to-choice-in-a-world-of-scarcity)
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 3](https://openstax.org/books/principles-microeconomics-3e/pages/3-introduction-to-demand-and-supply)
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 5 · Elasticity](https://openstax.org/books/principles-microeconomics-3e/pages/5-introduction-to-elasticity)
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 6 · Consumption](https://openstax.org/books/principles-microeconomics-3e/pages/6-introduction-to-consumer-choices)
+- [OpenStax, *Principles of Microeconomics 3e*, Chapter 7 · Production and Costs](https://openstax.org/books/principles-microeconomics-3e/pages/7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit)
+- [OpenStax, *Principles of Microeconomics 3e*, Chapter 8 · Perfect Competition](https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions)
+- [OpenStax, *Principles of Microeconomics 3e*, Chapter 9 · Monopoly](https://openstax.org/books/principles-microeconomics-3e/pages/9-2-how-a-profit-maximizing-monopoly-chooses-output-and-price)
+- [MIT OpenCourseWare, 14.01SC · Producer Theory](https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-3-producer-theory/introduction-to-producer-theory/)
+- [MIT OpenCourseWare, 14.01SC · Monopoly II](https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-5-monopoly-and-oligopoly/monopoly-ii/)
 - [Jensen & Miller (2008), Giffen Behavior and Subsistence Consumption](https://www.aeaweb.org/articles?id=10.1257/aer.98.4.1553)
 - [CORE Econ, *The Economy 2.0: Microeconomics*, Unit 8](https://books.core-econ.org/the-economy/microeconomics/08-supply-demand-02-buying-and-selling.html)
 - 制作方法参考：[Olah-style-posts](https://github.com/1998x-stack/Olah-style-posts)

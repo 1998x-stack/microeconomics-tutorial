@@ -60,7 +60,7 @@ with Server(("127.0.0.1", PORT), QuietHandler) as server:
                         assert before!=after and "30" in after, f"inert market lab {index}"
                         control.evaluate("(e)=>{e.value='20'; e.dispatchEvent(new Event('input',{bubbles:true}))}")
                 else:
-                    page.locator("#course-search").fill("吉芬")
+                    page.locator("#course-search").fill("支付意愿")
                     assert page.locator(".course-card:visible").count()==1, "catalogue search"
                     page.locator("#course-search").fill("")
                 checks.append({"page":index,"viewport":tag,"result":"pass"})

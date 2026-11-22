@@ -69,9 +69,14 @@ with Server(("127.0.0.1",PORT),QuietHandler) as server:
                 assert page.locator("h1").count()==1, f"H1: {name}"
                 dims=page.evaluate("({inner:innerWidth,scroll:document.documentElement.scrollWidth})")
                 assert dims["scroll"]<=dims["inner"]+1, f"document horizontal overflow {name} {label}: {dims}"
+                # Loading=lazy is intentionally used for long chapters. Scroll each
+                # figure into its viewport, await decode, then verify the actual image.
+                for im in page.locator("img").all():
+                    im.scroll_into_view_if_needed()
+                    im.evaluate("(e)=>e.decode()")
                 assert page.locator("img").evaluate_all(
                     "(els)=>els.every(e=>e.complete && e.naturalWidth>0)"
-                ),f"broken SVG image: {name} {label}"
+                ),f"broken SVG image after load: {name} {label}"
                 if name=="index":
                     page.locator("#course-search").fill("支付意愿")
                     assert page.locator(".course-card:visible").count()==1, "catalogue search wrong"

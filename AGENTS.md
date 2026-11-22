@@ -31,3 +31,12 @@ Follow `https://github.com/1998x-stack/Olah-style-posts/tree/main/skills/olah-st
 - Check numerical examples independently; unit consistency and all curve intersection arithmetic.
 - Verify citations, all internal relative links, nonempty SVG alt/figcaption, complete nav, search and labs.
 - Add evidence ledger update and a note to README when a chapter is refactored.
+
+## Consumer theory numerical canon (chapters 06–10)
+- Chapter 06: demand Qd=120−2P. Point |elasticity|=2P/Q; midpoint elasticity for (P20,Q80)→(P30,Q60) is 0.7142857 in absolute value. Do not confuse elasticity and slope, revenue and profit, or price movement and a shift.
+- Chapter 07: same market Qd=120−2P and Qs=20+3P. For per-unit tax t use Pc=Pp+t, yielding Pc=20+0.6t, Pp=20−0.4t, Q=80−1.2t, revenue=tQ, and DWL=0.6t² under no externalities. Legal remitter is not economic tax bearer. Price ceiling/floor computations distinguish planned from transacted quantities.
+- Chapter 08: the discrete TU=12x−x² model is **separate** from Cobb–Douglas U=√(xy). The latter has budget I=12, Px=2, Py=1, interior optimum (3,6). Keep utility ordinal and state interior conditions before using MUx/Px=MUy/Py.
+- Chapter 09: for the same Cobb–Douglas model MRS=y/x and budget slope −Px/Py=−2. A smooth tangency does not universally hold at corners or kinks. Price drop Px2→1 rotates the budget and gives C=(6,6).
+- Chapter 10: old A=(3,6), new C=(6,6). Hicks B=(√18,√18) at compensated income 2√18; Slutsky B=(4.5,4.5) at compensated income 9. Total Δx=3 in both decompositions, components differ. Cobb–Douglas here implies normal goods; **do not depict Giffen behavior as derived from it**. For documented Giffen evidence cite Jensen & Miller (2008) with population and finding scope.
+- Every new lab must function without network access, with live ARIA status, labeled native controls and a deterministic smoke test. Static figures carry the entire explanatory claim if JS is disabled.
+- QA now covers chapters 01–10. Never mark 11–28 as reviewed, and do not weaken a failing test to make CI pass.

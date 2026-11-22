@@ -1,0 +1,69 @@
+{
+  "chapter": "12",
+  "title": "成本分析：会计师 vs 经济学家",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · Ch. 7 Introduction to Production, Costs, and Industry Structure（显性与隐性成本、会计利润与经济利润、短期成本曲线）",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-introduction-to-production-costs-and-industry-structure",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 7 章导言（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "independent explanation, no reproduced figures"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：TFC=100，TVC(Q)=20Q−3Q²+0.5Q³，因此 MC=20−6Q+1.5Q²、AVC=20−3Q+0.5Q²",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/12.html #short-costs",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "成本表取值：Q=3 时 TVC=46.5、TC=146.5、MC=15.5、AFC=33.3、AVC=15.5、ATC=48.8（Q=1..8 见正文表）",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/12.html #short-costs 表格",
+      "status": "derived",
+      "notes": "直接代入 TVC 函数计算"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "AVC 在 Q=3 达到最低 15.5 且此刻 MC=AVC；ATC 在 Q≈5.886 达到最低约 36.65 且此刻 MC=ATC",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/12.html #mc-crossing",
+      "status": "derived",
+      "notes": "由 dAVC/dQ=(MC−AVC)/Q 与 dATC/dQ=(MC−ATC)/Q 及极值条件求得"
+    },
+    {
+      "id": "derivation-4",
+      "claim": "教学示例利润核算：总收益 50，显性成本 40，会计利润 10；隐性成本 17，经济利润 −7；正常利润 17",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/12.html #profits 表格",
+      "status": "derived",
+      "notes": "50−40=10；50−40−17=−7；假设/教学示例"
+    },
+    {
+      "id": "concept-1",
+      "claim": "协和效应：因已投入过多而继续追加不可行项目，是沉没成本谬误的常见说法来源",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "广泛记载的公共历史案例（英法协和客机政府投入）",
+      "status": "verified",
+      "notes": "仅作概念举例，未引用具体金额"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现本章的利润对比与成本曲线",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/12-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

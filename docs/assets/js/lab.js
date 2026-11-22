@@ -37,4 +37,9 @@ document.querySelectorAll('[data-lab="production"]').forEach(root=>{
  const update=()=>{const l=+L.value,q=3*l*l-0.1*l*l*l,ap=l?q/l:0,mp=6*l-0.3*l*l;out(root,'labor',l);const stage=l===0?'尚无投入，产量为 0':(mp>ap?'MP>AP，AP 仍在上升':mp<ap?'MP<AP，AP 已在下降':'MP=AP，AP 达到最高');v.textContent='L='+l+'：Q='+n(q,2)+'，AP='+n(ap,2)+'，MP='+n(mp,2)+'；'+stage+'。'+(mp<0?'已进入负边际报酬，总产量下降。':'');};
  hook(root,[L],update);
 });
+document.querySelectorAll('[data-lab="cost"]').forEach(root=>{
+ const Q=root.querySelector('[data-qty]'),v=root.querySelector('[data-result]');
+ const update=()=>{const q=+Q.value,tvc=20*q-3*q*q+0.5*q*q*q,tc=100+tvc,mc=20-6*q+1.5*q*q,atc=tc/q,avc=tvc/q;out(root,'qty',q);const rel=mc<atc?'MC<ATC，ATC 仍在下降':mc>atc?'MC>ATC，ATC 已上升':'MC=ATC，ATC 到最低点';const relv=mc<avc?'AVC 仍在下降':mc>avc?'AVC 已上升':'AVC 到最低点';v.textContent='Q='+n(q,1)+'：TC='+n(tc,1)+'，MC='+n(mc,1)+'，ATC='+n(atc,1)+'，AVC='+n(avc,1)+'；'+rel+'；'+relv+'。';};
+ hook(root,[Q],update);
+});
 })();

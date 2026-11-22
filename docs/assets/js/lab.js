@@ -35,7 +35,7 @@ document.querySelectorAll('[data-lab="decomposition"]').forEach(root=>{
 
 document.querySelectorAll('[data-lab="production"]').forEach(root=>{
  const l=root.querySelector('[data-labor]'),k=root.querySelector('[data-capital]'),v=root.querySelector('[data-result]');
- const update=()=>{const L=+l.value,K=+k.value,Q=2*Math.pow(L*K,2/3),mpl=(4/3)*Math.pow(L,-1/3)*Math.pow(K,2/3),mpk=(4/3)*Math.pow(K,-1/3)*Math.pow(L,2/3);out(root,'labor',L);out(root,'capital',K);v.textContent='L='+L+'人，K='+K+'台：Q='+n(Q,3)，MP_L='+n(mpl,3)+'，MP_K='+n(mpk,3)+'。两种投入同时翻倍，Q变为原来的 '+n(Math.pow(2,4/3),3)+' 倍。';};
+ const update=()=>{const L=+l.value,K=+k.value,Q=2*Math.pow(L*K,2/3),mpl=(4/3)*Math.pow(L,-1/3)*Math.pow(K,2/3),mpk=(4/3)*Math.pow(K,-1/3)*Math.pow(L,2/3);out(root,'labor',L);out(root,'capital',K);v.textContent='L='+L+'人，K='+K+'台：Q='+n(Q,3)+'，MP_L='+n(mpl,3)+'，MP_K='+n(mpk,3)+'。两种投入同时翻倍，Q变为原来的 '+n(Math.pow(2,4/3),3)+' 倍。';};
  hook(root,[l,k],update);
 });
 document.querySelectorAll('[data-lab="costs"]').forEach(root=>{
@@ -45,7 +45,7 @@ document.querySelectorAll('[data-lab="costs"]').forEach(root=>{
 });
 document.querySelectorAll('[data-lab="competition"]').forEach(root=>{
  const p=root.querySelector('[data-firm-price]'),v=root.querySelector('[data-result]');
- const update=()=>{const P=+p.value;out(root,'firm-price',P);if(P<6){v.textContent='P='+P+'，低于最低AVC=6：短期停产 q=0，仍承担固定成本32，利润=-32。';return;}const q=2+Math.sqrt((P-3)/3),vc=q**3-6*q*q+15*q,tc=32+vc,pi=P*q-tc,atc=tc/q;let state=P===6?'关停临界点':P<15?'继续生产但经济亏损':P===15?'零经济利润':'获得正经济利润';v.textContent='P='+P+'，最优q='+n(q,3)，ATC='+n(atc,3)，利润π='+n(pi,3)+'；'+state+'。';};
+ const update=()=>{const P=+p.value;out(root,'firm-price',P);if(P<6){v.textContent='P='+P+'，低于最低AVC=6：短期停产 q=0，仍承担固定成本32，利润=-32。';return;}const q=2+Math.sqrt((P-3)/3),vc=q**3-6*q*q+15*q,tc=32+vc,pi=P*q-tc,atc=tc/q;let state=P===6?'关停临界点':P<15?'继续生产但经济亏损':P===15?'零经济利润':'获得正经济利润';v.textContent='P='+P+'，最优q='+n(q,3)+'，ATC='+n(atc,3)，利润π='+n(pi,3)+'；'+state+'。';};
  hook(root,[p],update);
 });
 document.querySelectorAll('[data-lab="entry"]').forEach(root=>{

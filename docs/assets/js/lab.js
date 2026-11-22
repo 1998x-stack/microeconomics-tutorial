@@ -47,4 +47,9 @@ document.querySelectorAll('[data-lab="firm"]').forEach(root=>{
  const update=()=>{const p=+P.value;out(root,'price',p);let txt;if(p<=20){txt='P='+p+'：Q*=0（P ≤ AVC 最低点 20），利润=-200，短期应停产。';}else{const q=(p-20)/10,tc=200+20*q+5*q*q,profit=p*q-tc,atc=tc/q,avc=20+5*q;txt='P='+p+'：Q*='+n(q,2)+'，AVC='+n(avc,1)+'，ATC='+n(atc,1)+'，利润='+n(profit,0)+'；'+(profit>=0?'盈利，继续生产。':'亏损但 P>AVC，继续生产。');}v.textContent=txt;};
  hook(root,[P],update);
 });
+document.querySelectorAll('[data-lab="surplus"]').forEach(root=>{
+ const A=root.querySelector('[data-demand]'),v=root.querySelector('[data-result]');
+ const update=()=>{const a=+A.value,p=(a+20)/2,q=(a-20)/2,cs=0.5*(a-p)*q,ps=0.5*(p-20)*q;out(root,'a',a);v.textContent='均衡 Q*='+n(q,1)+'，P*='+n(p,1)+'；CS='+n(cs,0)+'，PS='+n(ps,0)+'，总剩余='+n(cs+ps,0)+'。';};
+ hook(root,[A],update);
+});
 })();

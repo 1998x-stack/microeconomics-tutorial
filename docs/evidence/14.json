@@ -1,0 +1,69 @@
+{
+  "chapter": "14",
+  "title": "完全竞争市场（下）：均衡与效率",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "OpenStax · Ch. 7 Introduction to Production, Costs, and Industry Structure（成本与利润最大化，作为长期均衡与效率的基础）",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-introduction-to-production-costs-and-industry-structure",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 7 章导言（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "独立讲解，未复制图形"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例初始均衡：D₀: P=100−Q 与 S₀: P=20+Q 交于 Q=40、P=60",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/14.html #problem",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "需求右移到 D₁: P=140−Q 后，短期 Q=60、P=80（正利润）；进入使供给右移到 S₁: P=Q−20，新长期 Q=80、P=60",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/14.html #problem",
+      "status": "derived",
+      "notes": "解两对线性方程得到"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "长期均衡条件 P=MC 与 P=ATC 联立得 MC=ATC，即生产在 ATC 最低点",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/14.html #long-run",
+      "status": "derived",
+      "notes": "由利润最大化与零经济利润两个条件推出"
+    },
+    {
+      "id": "derivation-4",
+      "claim": "教学示例剩余：CS=0.5×(100−60)×40=800，PS=0.5×(60−20)×40=800，总剩余 1600",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/14.html #surplus",
+      "status": "derived",
+      "notes": "三角形面积直接计算"
+    },
+    {
+      "id": "derivation-5",
+      "claim": "正常利润示例：会计利润 20，隐性成本（薪资 15+资金 5）=20，经济利润 = 20−20 = 0",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/14.html #normal-profit",
+      "status": "derived",
+      "notes": "假设/教学示例"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现进入/退出调整与消费者/生产者剩余",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/14-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

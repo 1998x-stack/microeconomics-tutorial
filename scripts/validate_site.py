@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-REVISED = 10
+REVISED = 15
 
 class Page(HTMLParser):
     def __init__(self):
@@ -86,7 +86,7 @@ def main():
         assert all(c.get("locator") for c in evidence["claims"])
         assert (ROOT/f"{n}.html").is_file(), f"legacy link absent for {n}"
     figures=sorted((DOCS/"assets"/"figures").glob("*.svg"))
-    assert len(figures) == 20, f"expected 20 SVGs, found {len(figures)}"
+    assert len(figures) == 30, f"expected 30 SVGs, found {len(figures)}"
     for path in figures:
         root=ET.parse(path).getroot()
         assert root.tag.endswith("svg") and root.get("viewBox"), path
@@ -95,7 +95,7 @@ def main():
         ids=[x.attrib["id"] for x in root.iter() if "id" in x.attrib]
         assert len(ids)==len(set(ids)), f"duplicate SVG IDs: {path}"
         assert not any(x.tag.endswith("script") for x in root.iter()), f"SVG script: {path}"
-    print(f"PASS: 28 chapters, first {REVISED} reviewed, 20 SVGs, 10 evidence files, local links, MathML structure.")
+    print(f"PASS: 28 chapters, first {REVISED} reviewed, 30 SVGs, 15 evidence files, local links, MathML structure.")
     print("LEGACY NOTE: chapters 11–28 retained but not subject to deep editorial audit.")
 
 if __name__=="__main__":

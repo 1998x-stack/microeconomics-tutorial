@@ -1,0 +1,96 @@
+{
+  "chapter": "10",
+  "title": "收入效应与替代效应",
+  "claims": [
+    {
+      "id": "reference-1",
+      "claim": "OpenStax · Indifference Curves (Appendix)",
+      "kind": "textbook_or_primary_research",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/b-indifference-curves",
+      "locator": "linked book section or AER paper abstract",
+      "notes": "claim scope is limited to the cited section; article diagrams independently authored"
+    },
+    {
+      "id": "reference-2",
+      "claim": "OpenStax · Income and Price Changes",
+      "kind": "textbook_or_primary_research",
+      "status": "verified",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-2-how-changes-in-income-and-prices-affect-consumption-choices",
+      "locator": "linked book section or AER paper abstract",
+      "notes": "claim scope is limited to the cited section; article diagrams independently authored"
+    },
+    {
+      "id": "reference-3",
+      "claim": "Intermediate Microeconomics · Substitution and Income Effects",
+      "kind": "textbook_or_primary_research",
+      "status": "verified",
+      "source_url": "https://faculty.fiu.edu/~boydj/intermediate/intermed06.pdf",
+      "locator": "linked book section or AER paper abstract",
+      "notes": "claim scope is limited to the cited section; article diagrams independently authored"
+    },
+    {
+      "id": "reference-4",
+      "claim": "Jensen & Miller (2008), Giffen Behavior and Subsistence Consumption, AER",
+      "kind": "textbook_or_primary_research",
+      "status": "verified",
+      "source_url": "https://www.aeaweb.org/articles?id=10.1257/aer.98.4.1553",
+      "locator": "linked book section or AER paper abstract",
+      "notes": "claim scope is limited to the cited section; article diagrams independently authored"
+    },
+    {
+      "id": "model-1",
+      "claim": "U=√xy、Px2→1、I12：旧A(3,6)、新C(6,6)",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/10.html derivation",
+      "notes": "derived from stated Cobb-Douglas utility; not empirical data"
+    },
+    {
+      "id": "model-2",
+      "claim": "Hicks中间B=(√18,√18)，补偿预算2√18≈8.485",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/10.html derivation",
+      "notes": "derived from stated Cobb-Douglas utility; not empirical data"
+    },
+    {
+      "id": "model-3",
+      "claim": "Slutsky中间B=(4.5,4.5)，补偿预算9",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/10.html derivation",
+      "notes": "derived from stated Cobb-Douglas utility; not empirical data"
+    },
+    {
+      "id": "model-4",
+      "claim": "Hicks替代1.243收入1.757；Slutsky替代1.5收入1.5",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/10.html derivation",
+      "notes": "derived from stated Cobb-Douglas utility; not empirical data"
+    },
+    {
+      "id": "model-5",
+      "claim": "Slutsky equation at old point: −1.5=−0.75−3×0.25",
+      "kind": "derived_teaching_example",
+      "status": "derived",
+      "source_url": null,
+      "locator": "docs/chapters/10.html derivation",
+      "notes": "derived from stated Cobb-Douglas utility; not empirical data"
+    },
+    {
+      "id": "original-figures",
+      "claim": "Two diagrams encode the Hicks and Slutsky bundles",
+      "kind": "illustrative",
+      "status": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/10-*.svg",
+      "notes": "no published diagram copied"
+    }
+  ]
+}

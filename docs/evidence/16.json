@@ -1,0 +1,51 @@
+{
+  "chapter": "16",
+  "title": "垄断竞争：差异化与广告",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "垄断竞争的特征（大量企业、产品差异化、自由进出）、短期与长期均衡、过剩产能定理，以及广告作为信息/说服与信号理论的讨论",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-introduction-to-monopolistic-competition-and-oligopoly",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 8 章 Monopolistic Competition and Oligopoly（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "独立讲解，未复制图形；经验品/搜寻品/信用品的分类为教科书常见划分"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例成本：TC=64+8q+q²，故 MC=8+2q，ATC=64/q+8+q；MC=ATC 得有效规模 q=8、ATC 最低 24",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/16.html #longrun",
+      "status": "derived",
+      "notes": "由总成本求导与求平均成本最低点得到"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "短期：需求 P=56−3q、MR=56−6q；MR=MC 得 q*=6、P=38，ATC≈24.67，经济利润 =(38−24.67)×6=80",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/16.html #shortrun",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "长期：自由进入使需求左移至 P=40−3q，与 ATC 在 q*=4、P=28 处相切，利润为零；P−MC=28−16=12；过剩产能 =8−4=4 件",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/16.html #longrun",
+      "status": "derived",
+      "notes": "相切条件：需求与 ATC 同点同斜率"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现垄断竞争的短期正利润与长期零利润（含过剩产能）",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/16-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

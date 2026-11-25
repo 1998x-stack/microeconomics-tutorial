@@ -77,4 +77,9 @@ document.querySelectorAll('[data-lab="externality"]').forEach(root=>{
  const update=()=>{const t=+T.value,q=(80-t)/2,p=100-q,rev=t*q,dwl=(t-20)*(t-20)/4;out(root,'tax',t);v.textContent='税率 t='+t+'：成交 Q='+n(q,1)+'，买方价 P='+n(p,1)+'，税收收入='+n(rev,1)+'，无谓损失='+n(dwl,1)+'；'+(t<20?'税率低于外部成本 20，产量仍高于社会最优 30。':t>20?'税率高于外部成本 20，产量低于社会最优 30。':'恰好等于单位外部成本 20，产量回到社会最优 30，无谓损失为 0。')};
  hook(root,[T],update);
 });
+document.querySelectorAll('[data-lab="publicgood"]').forEach(root=>{
+ const M=root.querySelector('[data-mc]'),v=root.querySelector('[data-result]');
+ const update=()=>{const mc=+M.value,eff=(20-mc)/2,priv=Math.max(0,12-mc),gap=eff-priv;out(root,'mc',mc);v.textContent='边际成本 MC='+mc+'：有效数量 x*='+n(eff,1)+'，私人供给 x='+n(priv,1)+'，缺口='+n(gap,1)+'。'+(gap>0?'私人供给低于有效水平，存在自由搭车导致的供给不足。':'两者一致。')};
+ hook(root,[M],update);
+});
 })();

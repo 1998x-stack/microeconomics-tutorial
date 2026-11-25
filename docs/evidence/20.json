@@ -1,0 +1,33 @@
+{
+  "chapter": "20",
+  "title": "公共物品与公共资源：集体行动的困境",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "公共物品的非排他性与非竞争性、自由搭车问题、公共资源的过度使用（公地悲剧），以及奥斯特罗姆关于自主治理的设计原则",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/13-introduction-to-positive-externalities-and-public-goods",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 13 章 Positive Externalities and Public Goods（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形；奥斯特罗姆部分为概念概述"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：两人对公共物品的边际支付意愿为 12−x 与 8−x，社会边际收益 20−2x；与 MC=8 相等得有效数量 x*=6，而私人供给只到 x=4，存在 2 单位的供给不足",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/20.html #public",
+      "status": "derived",
+      "notes": "公共物品收益需垂直相加；私人决策只看自身边际收益"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：公共物品的垂直加总与供给不足，以及按排他性/竞争性划分的四类物品",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/20-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

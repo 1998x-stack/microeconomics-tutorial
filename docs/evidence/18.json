@@ -1,0 +1,42 @@
+{
+  "chapter": "18",
+  "title": "寡头垄断（下）：博弈论入门",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "囚徒困境、纳什均衡、占优策略与重复博弈（触发策略）作为分析寡头互动的标准概念",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-introduction-to-monopolistic-competition-and-oligopoly",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 8 章 Monopolistic Competition and Oligopoly（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "独立讲解，未复制图形；博弈论术语为经济学标准概念"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例收益矩阵：双方高价 (10,10)、单方低价 (12,2) 或 (2,12)、双方低价 (4,4)；因 12>10 且 4>2，低价是占优策略，(低价,低价) 是唯一纳什均衡且劣于 (高价,高价)",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/18.html #pd",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "重复博弈触发策略的维持条件：δ ≥ (12−10)/(12−4) = 0.25，其中 δ 为贴现因子",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/18.html #repeated",
+      "status": "derived",
+      "notes": "由合作现值 ≥ 背叛现值 解出；使用与收益矩阵相同的教学示例"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现囚徒困境收益矩阵与重复博弈的合作/背叛路径",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/18-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

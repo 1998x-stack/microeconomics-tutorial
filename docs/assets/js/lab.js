@@ -67,4 +67,9 @@ document.querySelectorAll('[data-lab="cournot"]').forEach(root=>{
  const update=()=>{const nf=+N.value,q=120/(nf+1),Q=120*nf/(nf+1),p=120/(nf+1);out(root,'firms',nf);v.textContent='厂商数 n='+nf+'：每家 q='+n(q,1)+'，总产量 Q='+n(Q,1)+'，价格 P='+n(p,1)+'，行业总利润='+n(p*Q,0)+'。'+(nf===1?'（垄断）':nf===2?'（古诺双头）':'')+(nf>=5?'厂商越多，结果越趋近竞争：P→0、Q→120。':'');};
  hook(root,[N],update);
 });
+document.querySelectorAll('[data-lab="repeated"]').forEach(root=>{
+ const D=root.querySelector('[data-discount]'),v=root.querySelector('[data-result]');
+ const update=()=>{const d=+D.value/100,coop=10/(1-d),dev=12+4*d/(1-d);out(root,'discount',D.value);v.textContent='贴现因子 δ='+n(d,2)+'：坚持合作现值='+n(coop,1)+'，背叛现值='+n(dev,1)+'；临界值 δ*=(12−10)/(12−4)=0.25，当前'+(d>=0.25?'δ≥δ*，触发策略能使合作维持。':'δ<δ*，短期诱惑压倒长期合作，合作难以维持。')+'。';};
+ hook(root,[D],update);
+});
 })();

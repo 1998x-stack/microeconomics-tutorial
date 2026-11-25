@@ -62,4 +62,9 @@ document.querySelectorAll('[data-lab="monopolistic"]').forEach(root=>{
  const update=()=>{const a=+A.value,q=(a-8)/8,p=a-3*q,tc=64+8*q+q*q,profit=p*q-tc;out(root,'a',a);v.textContent='需求截距 A='+a+'：短期 q='+n(q,2)+'，P='+n(p,2)+'，ATC='+n(tc/q,2)+'，经济利润='+n(profit,1)+'；'+(a>40?'正利润吸引新企业进入。':a<40?'亏损促使企业退出。':'与长期均衡一致（利润为零）。')+'长期：q=4，P=28。';};
  hook(root,[A],update);
 });
+document.querySelectorAll('[data-lab="cournot"]').forEach(root=>{
+ const N=root.querySelector('[data-firms]'),v=root.querySelector('[data-result]');
+ const update=()=>{const nf=+N.value,q=120/(nf+1),Q=120*nf/(nf+1),p=120/(nf+1);out(root,'firms',nf);v.textContent='厂商数 n='+nf+'：每家 q='+n(q,1)+'，总产量 Q='+n(Q,1)+'，价格 P='+n(p,1)+'，行业总利润='+n(p*Q,0)+'。'+(nf===1?'（垄断）':nf===2?'（古诺双头）':'')+(nf>=5?'厂商越多，结果越趋近竞争：P→0、Q→120。':'');};
+ hook(root,[N],update);
+});
 })();

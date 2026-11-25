@@ -1,0 +1,51 @@
+{
+  "chapter": "17",
+  "title": "寡头垄断（上）：数量与价格竞争",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "寡头市场中的数量竞争（古诺）、价格竞争（伯川德）、序贯行动（斯塔克伯格）与反应函数的概念及标准求解",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-introduction-to-monopolistic-competition-and-oligopoly",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 8 章 Monopolistic Competition and Oligopoly（HTTP 200 已核对标题）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形；古诺/伯川德/斯塔克伯格为博弈论与产业组织的标准模型"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：反需求 P=120−Q、边际成本为 0；厂商1反应函数 q1=(120−q2)/2，对称古诺均衡 q1=q2=40，Q=80、P=40，每家利润 =(40−0)×40=1600",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/17.html #cournot",
+      "status": "derived",
+      "notes": "由利润最大化求导得到反应函数，再联立两条反应函数"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "斯塔克伯格序贯博弈：领导者 q1=60、追随者 q2=30，Q=90、P=30；领导者利润 1800、追随者利润 900",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/17.html #stackelberg",
+      "status": "derived",
+      "notes": "将追随者反应函数代入领导者目标后求最大"
+    },
+    {
+      "id": "derivation-3",
+      "claim": "对照：伯川德同质价格竞争使 P=MC=0、Q=120；串谋（垄断）产量 Q=60、价格 P=60、行业总利润 3600；完全竞争 Q=120、P=0",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/17.html #compare",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据；串谋产量由 MR=120−2Q=0 得到"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现古诺反应函数交点与竞争/古诺/串谋三种结果",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/17-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

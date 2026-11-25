@@ -87,4 +87,9 @@ document.querySelectorAll('[data-lab="lemons"]').forEach(root=>{
  const update=()=>{const f=+F.value/100,pooled=100+140*f,plums=pooled>=200;out(root,'plum',F.value);v.textContent='好车占比 '+F.value+'%：买方愿出的期望价 =100+140×'+n(f,2)+'='+n(pooled,1)+'；'+(plums?'高于好车卖方保留价 200，两类车都成交。':'低于好车卖方保留价 200（临界值约 71.4%），好车退出，市场只剩差车（逆向选择）。')};
  hook(root,[F],update);
 });
+document.querySelectorAll('[data-lab="redistribution"]').forEach(root=>{
+ const T=root.querySelector('[data-tax]'),v=root.querySelector('[data-result]');
+ const update=()=>{const t=+T.value,q=40-t/2,rev=40*t-t*t/2,eb=t*t/4;out(root,'tax',t);v.textContent='税率 t='+t+'：成交 Q='+n(q,1)+'，税收收入='+n(rev,1)+'，超额负担='+n(eb,1)+'；'+(t<40?'收入仍随税率上升，超额负担缓慢增加。':t>40?'税率已过峰值 40，收入反而下降，但超额负担继续加速上升。':'收入达到峰值 800，超额负担为 400。')};
+ hook(root,[T],update);
+});
 })();

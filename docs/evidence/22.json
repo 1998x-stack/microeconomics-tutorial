@@ -1,0 +1,42 @@
+{
+  "chapter": "22",
+  "title": "再分配与税收效率",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "收入不平等、洛伦兹曲线、基尼系数与贫困衡量的概念，以及再分配政策工具的讨论",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/15-introduction-to-poverty-and-economic-inequality",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 15 章 Poverty and Economic Inequality（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形；未引用具体国家的基尼系数数值"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：五人收入 1、2、3、4、10（合计 20）的洛伦兹曲线下面积 B=0.30，三角形面积 A+B=0.5，故基尼系数 =0.20/0.5=0.40",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/22.html #lorenz",
+      "status": "derived",
+      "notes": "由梯形法计算洛伦兹曲线下面积得到"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "教学示例：需求 P=100−Q、供给 P=20+Q 下单位税 t 使 Q=40−t/2，税收收入 =40t−t²/2（t=40 时最大 800），超额负担 =t²/4（t=40 时为 400）",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/22.html #efficiency",
+      "status": "derived",
+      "notes": "由供需联立与三角形面积得到；超额负担随税率平方增长"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：洛伦兹曲线与基尼系数，以及税收收入与超额负担随税率的变化",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/22-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

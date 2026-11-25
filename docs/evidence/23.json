@@ -1,0 +1,33 @@
+{
+  "chapter": "23",
+  "title": "劳动市场与人力资本",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "劳动需求来自边际产品价值、劳动供给、均衡工资，以及补偿性差异等劳动市场概念",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/4-introduction-to-labor-and-financial-markets",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 4 章 Labor and Financial Markets（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形；超级明星经济与人力资本为概念概述"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：劳动需求 w=100−10L、劳动供给 w=40+10L，解得均衡就业 L=3、工资 w=70，此时边际产品价值等于工资",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/23.html #labormarket",
+      "status": "derived",
+      "notes": "由劳动需求与供给联立得到；假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：劳动市场均衡，以及补偿性差异（工资—风险关系）",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/23-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

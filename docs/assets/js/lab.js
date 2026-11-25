@@ -92,4 +92,9 @@ document.querySelectorAll('[data-lab="redistribution"]').forEach(root=>{
  const update=()=>{const t=+T.value,q=40-t/2,rev=40*t-t*t/2,eb=t*t/4;out(root,'tax',t);v.textContent='税率 t='+t+'：成交 Q='+n(q,1)+'，税收收入='+n(rev,1)+'，超额负担='+n(eb,1)+'；'+(t<40?'收入仍随税率上升，超额负担缓慢增加。':t>40?'税率已过峰值 40，收入反而下降，但超额负担继续加速上升。':'收入达到峰值 800，超额负担为 400。')};
  hook(root,[T],update);
 });
+document.querySelectorAll('[data-lab="labor"]').forEach(root=>{
+ const A=root.querySelector('[data-productivity]'),v=root.querySelector('[data-result]');
+ const update=()=>{const a=+A.value,L=(a-40)/20,w=(a+40)/2;out(root,'productivity',a);v.textContent='生产率参数 A='+a+'：劳动需求 VMPL='+a+'−10L，均衡就业 L='+n(L,1)+'，工资 w='+n(w,1)+'；'+(a>100?'生产率提高使劳动需求上移，就业与工资同向上升。':a<100?'生产率下降使劳动需求下移，就业与工资同向下降。':'对应正文的教学示例。')};
+ hook(root,[A],update);
+});
 })();

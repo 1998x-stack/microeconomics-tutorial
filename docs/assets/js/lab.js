@@ -82,4 +82,9 @@ document.querySelectorAll('[data-lab="publicgood"]').forEach(root=>{
  const update=()=>{const mc=+M.value,eff=(20-mc)/2,priv=Math.max(0,12-mc),gap=eff-priv;out(root,'mc',mc);v.textContent='边际成本 MC='+mc+'：有效数量 x*='+n(eff,1)+'，私人供给 x='+n(priv,1)+'，缺口='+n(gap,1)+'。'+(gap>0?'私人供给低于有效水平，存在自由搭车导致的供给不足。':'两者一致。')};
  hook(root,[M],update);
 });
+document.querySelectorAll('[data-lab="lemons"]').forEach(root=>{
+ const F=root.querySelector('[data-plum]'),v=root.querySelector('[data-result]');
+ const update=()=>{const f=+F.value/100,pooled=100+140*f,plums=pooled>=200;out(root,'plum',F.value);v.textContent='好车占比 '+F.value+'%：买方愿出的期望价 =100+140×'+n(f,2)+'='+n(pooled,1)+'；'+(plums?'高于好车卖方保留价 200，两类车都成交。':'低于好车卖方保留价 200（临界值约 71.4%），好车退出，市场只剩差车（逆向选择）。')};
+ hook(root,[F],update);
+});
 })();

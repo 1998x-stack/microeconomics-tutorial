@@ -1,0 +1,42 @@
+{
+  "chapter": "21",
+  "title": "信息不对称：逆向选择与道德风险",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "信息不对称的两类问题：交易前的逆向选择（如次品市场）与交易后的道德风险，以及信号发送作为缓解机制",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/16-introduction-to-information-risk-and-insurance",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 16 章 Information, Risk, and Insurance（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形；次品市场概念源自 Akerlof(1970)，本章仅作概念引用，不复制其数据"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：好车卖方保留价 200、买方价值 240；差车卖方保留价 60、买方价值 100。好车占比 f 时买方只愿付期望价 100+140f；f<5/7≈0.714 时期望价低于 200，好车退出，市场只剩差车",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/21.html #lemons",
+      "status": "derived",
+      "notes": "假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "教学示例信号模型：低/高能力者受教育成本分别为 4e 与 2e，信号收益 40；分离门槛 e* 需落在 (10,20) 之间",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/21.html #signaling",
+      "status": "derived",
+      "notes": "由低能力者不模仿（4e*>40）与高能力者愿投入（2e*<40）共同界定"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：逆向选择的市场退出示意与教育信号的分离条件",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/21-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

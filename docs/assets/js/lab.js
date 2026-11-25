@@ -72,4 +72,9 @@ document.querySelectorAll('[data-lab="repeated"]').forEach(root=>{
  const update=()=>{const d=+D.value/100,coop=10/(1-d),dev=12+4*d/(1-d);out(root,'discount',D.value);v.textContent='贴现因子 δ='+n(d,2)+'：坚持合作现值='+n(coop,1)+'，背叛现值='+n(dev,1)+'；临界值 δ*=(12−10)/(12−4)=0.25，当前'+(d>=0.25?'δ≥δ*，触发策略能使合作维持。':'δ<δ*，短期诱惑压倒长期合作，合作难以维持。')+'。';};
  hook(root,[D],update);
 });
+document.querySelectorAll('[data-lab="externality"]').forEach(root=>{
+ const T=root.querySelector('[data-tax]'),v=root.querySelector('[data-result]');
+ const update=()=>{const t=+T.value,q=(80-t)/2,p=100-q,rev=t*q,dwl=(t-20)*(t-20)/4;out(root,'tax',t);v.textContent='税率 t='+t+'：成交 Q='+n(q,1)+'，买方价 P='+n(p,1)+'，税收收入='+n(rev,1)+'，无谓损失='+n(dwl,1)+'；'+(t<20?'税率低于外部成本 20，产量仍高于社会最优 30。':t>20?'税率高于外部成本 20，产量低于社会最优 30。':'恰好等于单位外部成本 20，产量回到社会最优 30，无谓损失为 0。')};
+ hook(root,[T],update);
+});
 })();

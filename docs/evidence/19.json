@@ -1,0 +1,51 @@
+{
+  "chapter": "19",
+  "title": "外部性：私人成本与社会成本",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "负外部性、社会边际成本与私人边际成本的差异，以及庇古税将外部成本内部化的标准处理",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/12-introduction-to-environmental-protection-and-negative-externalities",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 12 章 Environmental Protection and Negative Externalities（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形"
+    },
+    {
+      "id": "textbook-2",
+      "claim": "正外部性、公共物品，以及科斯定理（产权界定与无摩擦谈判可达成有效结果）的标准表述",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/13-introduction-to-positive-externalities-and-public-goods",
+      "locator": "OpenStax Principles of Microeconomics 3e, 第 13 章 Positive Externalities and Public Goods（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "科斯定理本章仅在文字中概括，未引用具体案例数据"
+    },
+    {
+      "id": "derivation-1",
+      "claim": "教学示例：需求 P=100−Q、MPC=20+Q、单位外部成本 20，故 MSC=40+Q；市场均衡 Q=40、P=60，社会最优 Q=30、P=70，无谓损失 =0.5×20×10=100",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/19.html #negative",
+      "status": "derived",
+      "notes": "由需求与私人/社会边际成本联立，以及三角形面积得到"
+    },
+    {
+      "id": "derivation-2",
+      "claim": "对每单位征 t=20 的庇古税，使有效供给上移到 MSC，买方价 70、卖方净得 50、产量回到 30，税收收入 =20×30=600，无谓损失归零",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/19.html #policy",
+      "status": "derived",
+      "notes": "税收楔子等于单位外部成本时纠正外部性"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG 复现负外部性的无谓损失与庇古税的矫正效果",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/19-*.svg",
+      "status": "illustrative",
+      "notes": "drawn for this repo"
+    }
+  ]
+}

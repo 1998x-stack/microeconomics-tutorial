@@ -1,0 +1,51 @@
+{
+  "chapter": "24",
+  "title": "行为经济学：心理与决策",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "行为经济学、有限理性、前景理论、框架效应与助推等概念参考教材与原始研究",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-introduction",
+      "locator": "OpenStax Principles of Microeconomics 3e，教材首页（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形"
+    },
+    {
+      "id": "params-1",
+      "claim": "前景理论常用参数 α=β≈0.88、λ≈2.25 来自 Tversky & Kahneman (1992)",
+      "kind": "literature_parameter",
+      "source_url": "https://doi.org/10.1007/BF00122574",
+      "locator": "Tversky & Kahneman (1992), Journal of Risk and Uncertainty 5(4): 297–323，参数估计（DOI 302 已核对）",
+      "status": "verified",
+      "notes": "参数为跨被试平均值，随任务与人群变化；本章仅作教学示例"
+    },
+    {
+      "id": "defaults-1",
+      "claim": "器官捐赠同意率随默认选项（opt-in / opt-out）显著不同",
+      "kind": "empirical_reference",
+      "source_url": "https://doi.org/10.1126/science.1091721",
+      "locator": "Johnson & Goldstein (2003), Science 302(5649): 1338–1339，国家对比（DOI 302 已核对）",
+      "status": "verified",
+      "notes": "Science 站点对自动抓取返回 403，DOI 有效；数值引自该文，未在本仓重算"
+    },
+    {
+      "id": "numeric-1",
+      "claim": "教学示例：α=0.88、λ=2.25 时 v(100)=100^0.88≈57.5，v(−100)≈−129.5",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/24.html #prospect 与 #lab",
+      "status": "derived",
+      "notes": "由价值函数直接计算；假设/教学示例参数，非实验观测值"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：前景理论价值函数、框架效应示意",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/24-prospect-theory.svg、24-framing.svg",
+      "status": "illustrative",
+      "notes": "为本仓独立绘制"
+    }
+  ]
+}

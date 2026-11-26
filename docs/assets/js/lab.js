@@ -97,4 +97,9 @@ document.querySelectorAll('[data-lab="labor"]').forEach(root=>{
  const update=()=>{const a=+A.value,L=(a-40)/20,w=(a+40)/2;out(root,'productivity',a);v.textContent='生产率参数 A='+a+'：劳动需求 VMPL='+a+'−10L，均衡就业 L='+n(L,1)+'，工资 w='+n(w,1)+'；'+(a>100?'生产率提高使劳动需求上移，就业与工资同向上升。':a<100?'生产率下降使劳动需求下移，就业与工资同向下降。':'对应正文的教学示例。')};
  hook(root,[A],update);
 });
+document.querySelectorAll('[data-lab="prospect"]').forEach(root=>{
+ const X=root.querySelector('[data-outcome]'),L=root.querySelector('[data-lambda]'),v=root.querySelector('[data-result]');
+ const update=()=>{const x=+X.value,l=+L.value,g=Math.pow(x,0.88),loss=-l*g;out(root,'outcome',x);out(root,'lambda',l);v.textContent='x='+x+'，λ='+n(l,2)+'：收益价值 v('+x+')='+n(g,1)+'，损失价值 v(−'+x+')='+n(loss,1)+'；损失约为收益的 '+n(l,2)+' 倍。'+(l>1?'损失厌恶：损失一侧更陡。':l===1?'损失与收益对称：损失厌恶消失。':'')};
+ hook(root,[X,L],update);
+});
 })();

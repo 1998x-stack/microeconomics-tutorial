@@ -102,4 +102,9 @@ document.querySelectorAll('[data-lab="prospect"]').forEach(root=>{
  const update=()=>{const x=+X.value,l=+L.value,g=Math.pow(x,0.88),loss=-l*g;out(root,'outcome',x);out(root,'lambda',l);v.textContent='x='+x+'，λ='+n(l,2)+'：收益价值 v('+x+')='+n(g,1)+'，损失价值 v(−'+x+')='+n(loss,1)+'；损失约为收益的 '+n(l,2)+' 倍。'+(l>1?'损失厌恶：损失一侧更陡。':l===1?'损失与收益对称：损失厌恶消失。':'')};
  hook(root,[X,L],update);
 });
+document.querySelectorAll('[data-lab="insurance"]').forEach(root=>{
+ const P=root.querySelector('[data-prob]'),v=root.querySelector('[data-result]');
+ const update=()=>{const p=+P.value/100,W=100,L=50,eu=(1-p)*Math.sqrt(W)+p*Math.sqrt(W-L),ce=eu*eu,fair=p*L,rp=(W-p*L)-ce,maxp=W-ce;out(root,'prob',P.value);v.textContent='p='+P.value+'%：公平保费 '+n(fair,2)+' 万元，E[U]='+n(eu,3)+'，确定等价 CE='+n(ce,3)+' 万元，风险溢价≈'+n(rp,3)+' 万元，最大可接受保费≈'+n(maxp,3)+' 万元。'};
+ hook(root,[P],update);
+});
 })();

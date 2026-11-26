@@ -1,0 +1,51 @@
+{
+  "chapter": "25",
+  "title": "风险、不确定性与保险",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "风险与不确定性、期望效用、风险规避与保险等概念参考教材与经典著作",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-introduction",
+      "locator": "OpenStax Principles of Microeconomics 3e，教材首页（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形"
+    },
+    {
+      "id": "knight-1",
+      "claim": "“可量化的风险”与“不可量化的不确定性”的经典区分来自奈特（1921）",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "Knight, F. H. (1921). Risk, Uncertainty and Profit, Houghton Mifflin",
+      "status": "verified",
+      "notes": "概念引用，不涉及具体数值"
+    },
+    {
+      "id": "eu-1",
+      "claim": "期望效用框架由 von Neumann & Morgenstern (1944) 建立",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "von Neumann & Morgenstern (1944). Theory of Games and Economic Behavior, Princeton University Press",
+      "status": "verified",
+      "notes": "概念引用"
+    },
+    {
+      "id": "numeric-1",
+      "claim": "教学示例：U(W)=√W、W=100、L=50、p=1%，得公平保费 0.5、CE≈99.415、最大可接受保费≈0.585 万元",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/25.html #eu 与 #lab",
+      "status": "derived",
+      "notes": "由期望效用与确定等价直接计算；假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：风险规避与确定等价、逆向选择死亡螺旋",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/25-risk-aversion.svg、25-death-spiral.svg",
+      "status": "illustrative",
+      "notes": "为本仓独立绘制"
+    }
+  ]
+}

@@ -52,4 +52,11 @@ for p in [1,1.25,1.5,1.75,2]:
     eq((xs-3)+(xc-xs),xc-3)
     eq(xh*sqrt(18*p),18)
     eq((xs*p)+(3*p+6)/2,3*p+6)
+
+# Chapter 01: marginal decision lab stops at three units.
+mb=[90,70,50,30]; mc=[25,35,45,55]
+cum=[0]
+for i in range(4): cum.append(cum[-1]+mb[i]-mc[i])
+assert cum==[0,65,100,105,80]
+assert [mb[i]-mc[i] for i in range(4)]==[65,35,5,-25]
 print("PASS: elasticity, tax incidence, consumer optimum, Hicks/Slutsky numerical identities.")

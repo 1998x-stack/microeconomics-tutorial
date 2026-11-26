@@ -127,4 +127,14 @@ document.querySelectorAll('[data-lab="welfare"]').forEach(root=>{
  const update=()=>{const t=+T.value,pc=20+0.6*t,pp=20-0.4*t,q=80-1.2*t,cs=0.5*(60-pc)*q,ps=0.5*(pp+20/3)*q,rev=t*q,dwl=0.6*t*t,tot=cs+ps+rev;out(root,'tax',t);v.textContent='t='+t+'：买方价 Pc='+n(pc,1)+'，卖方净价 Pp='+n(pp,1)+'，成交 Q='+n(q,1)+'；CS='+n(cs,1)+'，PS='+n(ps,1)+'，税收='+n(rev,1)+'，无谓损失='+n(dwl,1)+'，CS+PS+税收='+n(tot,1)+'。'};
  hook(root,[T],update);
 });
+document.querySelectorAll('[data-lab="marginal"]').forEach(root=>{
+ const U=root.querySelector('[data-units]'),v=root.querySelector('[data-result]'),mb=[90,70,50,30],mc=[25,35,45,55];
+ const update=()=>{const u=+U.value;let cum=0;for(let i=0;i<u;i++)cum+=mb[i]-mc[i];out(root,'units',u);let s='投入 '+u+' 单位：累计净收益 '+cum+' 元';if(u>0)s+='，第 '+u+' 单位的边际净收益 '+(mb[u-1]-mc[u-1])+' 元';if(u<4){const x=mb[u]-mc[u];s+='；下一单位边际净收益 '+(x>0?'+':'')+x+' 元，'+(x>0?'仍值得追加。':'已不值得追加。')}else s+='；第四单位边际净收益为负，应停在第 3 单位。';v.textContent=s};
+ hook(root,[U],update);
+});
+document.querySelectorAll('[data-lab="ppf"]').forEach(root=>{
+ const A=root.querySelector('[data-food]'),v=root.querySelector('[data-result]'),B=a=>10-0.1*a*a;
+ const update=()=>{const a=+A.value;out(root,'food',a);let s='食物 A='+a+'：设备最多 '+n(B(a),1);if(a<10)s+='；再增产 1 单位食物需放弃 '+n(B(a)-B(a+1),1)+' 单位设备。';else s+='；已到食物产量上界，继续增产将超出当前资源与技术。';v.textContent=s};
+ hook(root,[A],update);
+});
 })();

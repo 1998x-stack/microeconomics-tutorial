@@ -27,6 +27,15 @@
       "source_url": null,
       "locator": "chapters/01.html",
       "notes": "hypothetical illustration"
+    },
+    {
+      "id": "lab-marginal",
+      "claim": "Interactive lab reuses the hypothetical MB=90/70/50/30 and MC=25/35/45/55, stopping at 3 units",
+      "kind": "calculation",
+      "status": "illustrative",
+      "source_url": null,
+      "locator": "chapters/01.html#experiment",
+      "notes": "cumulative net benefit 0/65/100/105/80 for 0-4 units"
     }
   ]
 }

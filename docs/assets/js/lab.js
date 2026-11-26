@@ -129,7 +129,7 @@ document.querySelectorAll('[data-lab="welfare"]').forEach(root=>{
 });
 document.querySelectorAll('[data-lab="marginal"]').forEach(root=>{
  const U=root.querySelector('[data-units]'),v=root.querySelector('[data-result]'),mb=[90,70,50,30],mc=[25,35,45,55];
- const update=()=>{const u=+U.value;let cum=0;for(let i=0;i<u;i++)cum+=mb[i]-mc[i];out(root,'units',u);let s='投入 '+u+' 单位：累计净收益 '+cum+' 元';if(u>0)s+='，第 '+u+' 单位的边际净收益 '+(mb[u-1]-mc[u-1])+' 元';if(u<4){const x=mb[u]-mc[u];s+='；下一单位边际净收益 '+(x>0?'+':'')+x+' 元，'+(x>0?'仍值得追加。':'已不值得追加。')}else s+='；第四单位边际净收益为负，应停在第 3 单位。';v.textContent=s};
+ const update=()=>{const u=+U.value;let cum=0;for(let i=0;i<u;i++)cum+=mb[i]-mc[i];out(root,'units',u);let s='投入 '+u+' 单位：累计净收益 '+cum+' 元';if(u>0)s+='，第 '+u+' 单位的边际净收益 '+(mb[u-1]-mc[u-1])+' 元';if(u<4){const x=mb[u]-mc[u];s+='；下一单位边际净收益 '+(x>0?'+':'')+x+' 元，'+(x>0?'仍值得追加。':'已不值得追加。')}else s+='；第四单位起累计净收益转为下降，应停在 3 单位。';v.textContent=s};
  hook(root,[U],update);
 });
 document.querySelectorAll('[data-lab="ppf"]').forEach(root=>{

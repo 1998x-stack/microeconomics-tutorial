@@ -27,6 +27,15 @@
       "source_url": null,
       "locator": "chapters/02.html",
       "notes": "hypothetical illustration"
+    },
+    {
+      "id": "lab-ppf",
+      "claim": "Interactive PPF lab uses the documented teaching function B=10-0.1A^2 and its rising opportunity cost",
+      "kind": "calculation",
+      "status": "illustrative",
+      "source_url": null,
+      "locator": "chapters/02.html#experiment",
+      "notes": "B(4)=8.4, B(5)=7.5, so the marginal cost from A=4 is 0.9 units of equipment"
     }
   ]
 }

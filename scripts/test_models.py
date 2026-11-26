@@ -59,4 +59,10 @@ cum=[0]
 for i in range(4): cum.append(cum[-1]+mb[i]-mc[i])
 assert cum==[0,65,100,105,80]
 assert [mb[i]-mc[i] for i in range(4)]==[65,35,5,-25]
+
+# Chapter 02: PPF teaching function B=10-0.1A^2 with rising opportunity cost.
+Bp=lambda a:10-0.1*a*a
+eq(Bp(4),8.4); eq(Bp(6),6.4); eq(Bp(10),0.0)
+eq(Bp(4)-Bp(6),2.0); eq(Bp(8)-Bp(10),3.6); eq(3.6/2,1.8)
+eq(Bp(4)-Bp(5),0.9)
 print("PASS: elasticity, tax incidence, consumer optimum, Hicks/Slutsky numerical identities.")

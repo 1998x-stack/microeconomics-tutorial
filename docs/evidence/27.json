@@ -1,0 +1,51 @@
+{
+  "chapter": "27",
+  "title": "人工智能与微观经济学",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "市场势力、价格歧视与技术变革等概念参考教材",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-introduction",
+      "locator": "OpenStax Principles of Microeconomics 3e，教材首页（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形"
+    },
+    {
+      "id": "collusion-1",
+      "claim": "仅以自身利润为目标的定价算法可能学会接近合谋的高价",
+      "kind": "empirical_reference",
+      "source_url": "https://doi.org/10.1257/aer.20190623",
+      "locator": "Calvano, Calzolari, Denicolò & Pastorello (2020), American Economic Review 110(10): 3267–3297（DOI 302 已核对）",
+      "status": "verified",
+      "notes": "仿真研究结论，非特定企业案例"
+    },
+    {
+      "id": "llm-1",
+      "claim": "用大语言模型作为被模拟的经济主体来研究经济行为",
+      "kind": "empirical_reference",
+      "source_url": "https://doi.org/10.3386/w31122",
+      "locator": "Horton, J. J. (2023). Large Language Models as Simulated Economic Agents (Homo Silicus), NBER WP 31122（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "方法性研究；本章同时说明其局限，不把 LLM 行为等同于真实人类行为"
+    },
+    {
+      "id": "numeric-1",
+      "claim": "教学示例：需求 P=12−Q、MC=0，统一定价 P=6、Q=6；12 名消费者支付意愿 12…1 时，分组越细利润越高、消费者剩余越低",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/27.html #personalized 与 #lab",
+      "status": "derived",
+      "notes": "由需求函数与枚举计算；假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：算法定价的两条路径、统一定价与个性化定价对比",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/27-algorithmic-pricing.svg、27-personalized-pricing.svg",
+      "status": "illustrative",
+      "notes": "为本仓独立绘制"
+    }
+  ]
+}

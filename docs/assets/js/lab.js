@@ -115,4 +115,11 @@ document.querySelectorAll('[data-lab="platform"]').forEach(root=>{
  const update=()=>{const s=+S.value,r=sides(s);out(root,'split',s);v.textContent='P_A='+s+'，P_B='+r.pb+'：买方参与 N_A≈'+n(r.NA,1)+'，卖方参与 N_B≈'+n(r.NB,1)+'，平台利润≈'+n(r.profit,1)+'。利润最高的分配：P_A≈'+n(best.pa,2)+'、P_B≈'+n(best.pb,2)+'，利润≈'+n(best.profit,1)+'。'};
  hook(root,[S],update);
 });
+document.querySelectorAll('[data-lab="personalized"]').forEach(root=>{
+ const G=root.querySelector('[data-groups]'),v=root.querySelector('[data-result]');
+ const w=[12,11,10,9,8,7,6,5,4,3,2,1];
+ const stats=g=>{const n=w.length;let profit=0,units=0,wtp=0;for(let k=0;k<g;k++){const lo=Math.floor(k*n/g),hi=Math.floor((k+1)*n/g);const s=w.slice(lo,hi);let bp=0,bc=0;for(const p of s){const c=s.filter(x=>x>=p).length;if(p*c>bp){bp=p*c;bc=c}}profit+=bp;units+=bc;wtp+=s.slice(0,bc).reduce((a,b)=>a+b,0)}return{profit:profit,units:units,cs:wtp-profit}};
+ const update=()=>{const g=+G.value,r=stats(g);out(root,'groups',g);v.textContent='组数 g='+g+'：企业利润='+r.profit+'，售出 '+r.units+' 件，消费者剩余='+n(r.cs,1)+'。'+(g===1?'（单一统一价）':g===12?'（完全个性化：总剩余几乎全被攫取）':'')};
+ hook(root,[G],update);
+});
 })();

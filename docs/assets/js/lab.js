@@ -122,4 +122,9 @@ document.querySelectorAll('[data-lab="personalized"]').forEach(root=>{
  const update=()=>{const g=+G.value,r=stats(g);out(root,'groups',g);v.textContent='组数 g='+g+'：企业利润='+r.profit+'，售出 '+r.units+' 件，消费者剩余='+n(r.cs,1)+'。'+(g===1?'（单一统一价）':g===12?'（完全个性化：总剩余几乎全被攫取）':'')};
  hook(root,[G],update);
 });
+document.querySelectorAll('[data-lab="welfare"]').forEach(root=>{
+ const T=root.querySelector('[data-tax]'),v=root.querySelector('[data-result]');
+ const update=()=>{const t=+T.value,pc=20+0.6*t,pp=20-0.4*t,q=80-1.2*t,cs=0.5*(60-pc)*q,ps=0.5*(pp+20/3)*q,rev=t*q,dwl=0.6*t*t,tot=cs+ps+rev;out(root,'tax',t);v.textContent='t='+t+'：买方价 Pc='+n(pc,1)+'，卖方净价 Pp='+n(pp,1)+'，成交 Q='+n(q,1)+'；CS='+n(cs,1)+'，PS='+n(ps,1)+'，税收='+n(rev,1)+'，无谓损失='+n(dwl,1)+'，CS+PS+税收='+n(tot,1)+'。'};
+ hook(root,[T],update);
+});
 })();

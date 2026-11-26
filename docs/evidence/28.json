@@ -1,0 +1,51 @@
+{
+  "chapter": "28",
+  "title": "综合实战：微观经济学分析框架",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "供需、税收归宿与福利分析等概念参考教材",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-introduction",
+      "locator": "OpenStax Principles of Microeconomics 3e，教材首页（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形"
+    },
+    {
+      "id": "demand-supply-1",
+      "claim": "需求、供给与市场均衡的分析框架参考 OpenStax 第 3 章",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-introduction-to-demand-and-supply",
+      "locator": "OpenStax Principles of Microeconomics 3e, Ch. 3: Demand and Supply",
+      "status": "verified",
+      "notes": "概念引用；沿用本课程第 7 章的教学参数"
+    },
+    {
+      "id": "framework-1",
+      "claim": "五步分析框架是对本课程第 1–27 章模型的整合性总结",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "docs/chapters/28.html #framework，#modelchoice",
+      "status": "verified",
+      "notes": "教学综合，不引入新的实证结论"
+    },
+    {
+      "id": "numeric-1",
+      "claim": "教学示例：Qd=120−2P、Qs=20+3P，无税 P=20、Q=80；t=20 时 Pc=32、Pp=12、Q=56、收入=1120、DWL=240",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/28.html #apply 与 #lab",
+      "status": "derived",
+      "notes": "由供需联立与税收归宿公式计算；假设/教学示例参数，非观测数据"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：五步分析框架、按问题特征选择模型",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/28-framework.svg、28-model-choice.svg",
+      "status": "illustrative",
+      "notes": "为本仓独立绘制"
+    }
+  ]
+}

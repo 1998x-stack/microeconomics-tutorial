@@ -7,7 +7,7 @@
 ## 当前进度
 
 - **01–10**：两轮深度重构，篇篇独立成文；共 20 张原创 SVG、MathML、可检查的数值实例、10 份证据记录，以及第 03–10 章的确定性交互实验。
-- **11–25**：已按 01–10 的规范重写（语义结构、MathML、每章两张原创 SVG、确定性实验与 `evidence/11.json`…`evidence/25.json`），但复核编号仍停在 01–10，等待人工确认后再提升状态。
+- **11–26**：已按 01–10 的规范重写（语义结构、MathML、每章两张原创 SVG、确定性实验与 `evidence/11.json`…`evidence/26.json`），但复核编号仍停在 01–10，等待人工确认后再提升状态。
 - **16–28**：保留原版 HTML 及导航，尚未完成同等深度的经济学和网页审查。
 - 推荐路线：稀缺与边际选择 → 比较优势 → 需求与供给 → 弹性与政策 → 效用与无差异曲线 → 收入与替代效应。
 - 每个教学模型使用明确声明的假设参数，允许读者独立核算，不能当作真实观测数据。
@@ -20,7 +20,7 @@
 │   ├── index.html                  # GitHub Pages 课程首页
 │   ├── chapters/
 │   │   ├── 01.html … 10.html       # 两批精修，每篇有两张SVG
-│   │   ├── 11.html … 25.html       # 已按同等规范重写（未提升复核编号）
+│   │   ├── 11.html … 26.html       # 已按同等规范重写（未提升复核编号）
 │   │   ├── 16.html … 28.html       # 原始课程兼容迁移
 │   │   ├── index.html              # 旧版章节返回目录链接兼容
 │   │   └── theme.css               # 旧章节样式兼容
@@ -28,7 +28,7 @@
 │   │   ├── css/site.css
 │   │   ├── js/lab.js
 │   │   └── figures/*.svg
-│   └── evidence/01.json … 25.json
+│   └── evidence/01.json … 26.json
 ├── scripts/validate_site.py
 ├── scripts/browser_check.py
 ├── scripts/test_models.py
@@ -38,7 +38,7 @@
 ├── AGENTS.md
 ├── README.md
 ├── index.html                     # 旧首页跳转到 docs/
-├── 01.html … 25.html              # 旧章节稳定跳转到新路径
+├── 01.html … 26.html              # 旧章节稳定跳转到新路径
 └── 16.html … 28.html              # 旧地址兼容保留
 ```
 

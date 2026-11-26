@@ -1,0 +1,51 @@
+{
+  "chapter": "26",
+  "title": "平台经济与双边市场",
+  "claims": [
+    {
+      "id": "textbook-1",
+      "claim": "双边市场、网络效应与市场势力等概念参考教材",
+      "kind": "conceptual_reference",
+      "source_url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-introduction",
+      "locator": "OpenStax Principles of Microeconomics 3e，教材首页（HTTP 200 已核对）",
+      "status": "verified",
+      "notes": "独立讲解与推导，未复制图形"
+    },
+    {
+      "id": "platform-1",
+      "claim": "交叉网络效应与双边市场定价的分析框架来自 Rochet & Tirole (2003)",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "Rochet, J.-C. & Tirole, J. (2003). Platform Competition in Two-Sided Markets, JEEA 1(4): 990–1029",
+      "status": "verified",
+      "notes": "概念与方法引用，不涉及具体平台费率"
+    },
+    {
+      "id": "critical-mass-1",
+      "claim": "临界规模与网络经济的论述参考 Shapiro & Varian (1999)",
+      "kind": "conceptual_reference",
+      "source_url": null,
+      "locator": "Shapiro, C. & Varian, H. (1999). Information Rules, Harvard Business School Press",
+      "status": "verified",
+      "notes": "概念引用"
+    },
+    {
+      "id": "numeric-1",
+      "claim": "教学示例：线性系统 N_A=60−5P_A+0.6N_B、N_B=60−8P_B+0.3N_A，T=12，价格分配存在内部最优",
+      "kind": "hypothetical_numeric_model",
+      "source_url": null,
+      "locator": "docs/chapters/26.html #lab",
+      "status": "derived",
+      "notes": "由两个线性方程联立求解；假设/教学示例参数，非平台实测数据"
+    },
+    {
+      "id": "figures",
+      "claim": "2 张原创独立 SVG：交叉网络效应循环、临界规模 S 型曲线",
+      "kind": "illustrative",
+      "source_url": null,
+      "locator": "docs/assets/figures/26-two-sided-loop.svg、26-critical-mass.svg",
+      "status": "illustrative",
+      "notes": "为本仓独立绘制"
+    }
+  ]
+}

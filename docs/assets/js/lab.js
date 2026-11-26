@@ -107,4 +107,12 @@ document.querySelectorAll('[data-lab="insurance"]').forEach(root=>{
  const update=()=>{const p=+P.value/100,W=100,L=50,eu=(1-p)*Math.sqrt(W)+p*Math.sqrt(W-L),ce=eu*eu,fair=p*L,rp=(W-p*L)-ce,maxp=W-ce;out(root,'prob',P.value);v.textContent='p='+P.value+'%：公平保费 '+n(fair,2)+' 万元，E[U]='+n(eu,3)+'，确定等价 CE='+n(ce,3)+' 万元，风险溢价≈'+n(rp,3)+' 万元，最大可接受保费≈'+n(maxp,3)+' 万元。'};
  hook(root,[P],update);
 });
+document.querySelectorAll('[data-lab="platform"]').forEach(root=>{
+ const S=root.querySelector('[data-split]'),v=root.querySelector('[data-result]');
+ const al=60,aA=5,aB=8,eA=0.6,eB=0.3,det=1-eA*eB,T=12;
+ const sides=pa=>{const pb=T-pa,NA=(al-aA*pa+eA*(al-aB*pb))/det,NB=(al-aB*pb+eB*(al-aA*pa))/det;return{pb:pb,NA:NA,NB:NB,profit:pa*NA+pb*NB}};
+ let best=null;for(let x=0;x<=T;x+=0.25){const r=sides(x);if(!best||r.profit>best.profit)best={pa:x,pb:r.pb,NA:r.NA,NB:r.NB,profit:r.profit}}
+ const update=()=>{const s=+S.value,r=sides(s);out(root,'split',s);v.textContent='P_A='+s+'，P_B='+r.pb+'：买方参与 N_A≈'+n(r.NA,1)+'，卖方参与 N_B≈'+n(r.NB,1)+'，平台利润≈'+n(r.profit,1)+'。利润最高的分配：P_A≈'+n(best.pa,2)+'、P_B≈'+n(best.pb,2)+'，利润≈'+n(best.profit,1)+'。'};
+ hook(root,[S],update);
+});
 })();

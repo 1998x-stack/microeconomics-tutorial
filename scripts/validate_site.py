@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-REVISED = 10
+REVISED = 15
 
 class Page(HTMLParser):
     def __init__(self):
@@ -64,6 +64,8 @@ def main():
             assert page.figures == page.captions, f"{path} figure/caption mismatch"
             assert all(im.get("alt") for im in page.images), f"{path} missing alt"
             assert "javascript:void" not in content, path
+            assert "<mi></mi>" not in content and "<mn></mn>" not in content, f"{path} contains empty MathML tokens"
+            if index > 0: assert page.math_count > 0, f"{path} missing MathML"
             assert all(v[0] == 2 for v in page.frac_children), f"{path} mfrac requires 2 children"
         for url in page.links:
             if url.startswith(("https:", "http:", "mailto:", "data:", "javascript:")): continue

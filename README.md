@@ -58,12 +58,17 @@ python3 scripts/browser_check.py
 
 ## 内容和证据
 
-前十章的模型数据均是教学示例，不是现实市场的统计。图解均为独立绘制，不使用 OpenStax 或 CORE Econ 的受版权保护图形。引述参考：
+前十五章的模型数据均是教学示例，不是现实市场的统计。图解均为独立绘制，不使用 OpenStax 或 CORE Econ 的受版权保护图形。引述参考：
 
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 2](https://openstax.org/books/principles-microeconomics-3e/pages/2-introduction-to-choice-in-a-world-of-scarcity)
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 3](https://openstax.org/books/principles-microeconomics-3e/pages/3-introduction-to-demand-and-supply)
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 5 · Elasticity](https://openstax.org/books/principles-microeconomics-3e/pages/5-introduction-to-elasticity)
 - [OpenStax, *Principles of Microeconomics 3e*, Chapter 6 · Consumption](https://openstax.org/books/principles-microeconomics-3e/pages/6-introduction-to-consumer-choices)
+- [OpenStax, *Principles of Microeconomics 3e*, Chapter 7 · Production and Costs](https://openstax.org/books/principles-microeconomics-3e/pages/7-1-explicit-and-implicit-costs-and-accounting-and-economic-profit)
+- [OpenStax, *Principles of Microeconomics 3e*, Chapter 8 · Perfect Competition](https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions)
+- [OpenStax, *Principles of Microeconomics 3e*, Chapter 9 · Monopoly](https://openstax.org/books/principles-microeconomics-3e/pages/9-2-how-a-profit-maximizing-monopoly-chooses-output-and-price)
+- [MIT OpenCourseWare, 14.01SC · Producer Theory](https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-3-producer-theory/introduction-to-producer-theory/)
+- [MIT OpenCourseWare, 14.01SC · Monopoly II](https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-5-monopoly-and-oligopoly/monopoly-ii/)
 - [Jensen & Miller (2008), Giffen Behavior and Subsistence Consumption](https://www.aeaweb.org/articles?id=10.1257/aer.98.4.1553)
 - [CORE Econ, *The Economy 2.0: Microeconomics*, Unit 8](https://books.core-econ.org/the-economy/microeconomics/08-supply-demand-02-buying-and-selling.html)
 - 制作方法参考：[Olah-style-posts](https://github.com/1998x-stack/Olah-style-posts)

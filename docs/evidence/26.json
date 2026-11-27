@@ -31,7 +31,7 @@
     },
     {
       "id": "numeric-1",
-      "claim": "教学示例：线性系统 N_A=60−5P_A+0.6N_B、N_B=60−8P_B+0.3N_A，T=12，价格分配存在内部最优",
+      "claim": "教学示例：线性系统 N_A=60−5P_A+0.3N_B、N_B=60−8P_B+0.3N_A，T=12，价格分配存在内部最优（P_A≈8、P_B≈4）",
       "kind": "hypothetical_numeric_model",
       "source_url": null,
       "locator": "docs/chapters/26.html #lab",

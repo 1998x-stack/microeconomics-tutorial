@@ -109,7 +109,7 @@ document.querySelectorAll('[data-lab="insurance"]').forEach(root=>{
 });
 document.querySelectorAll('[data-lab="platform"]').forEach(root=>{
  const S=root.querySelector('[data-split]'),v=root.querySelector('[data-result]');
- const al=60,aA=5,aB=8,eA=0.6,eB=0.3,det=1-eA*eB,T=12;
+ const al=60,aA=5,aB=8,eA=0.3,eB=0.3,det=1-eA*eB,T=12;
  const sides=pa=>{const pb=T-pa,NA=(al-aA*pa+eA*(al-aB*pb))/det,NB=(al-aB*pb+eB*(al-aA*pa))/det;return{pb:pb,NA:NA,NB:NB,profit:pa*NA+pb*NB}};
  let best=null;for(let x=0;x<=T;x+=0.25){const r=sides(x);if(!best||r.profit>best.profit)best={pa:x,pb:r.pb,NA:r.NA,NB:r.NB,profit:r.profit}}
  const update=()=>{const s=+S.value,r=sides(s);out(root,'split',s);v.textContent='P_A='+s+'，P_B='+r.pb+'：买方参与 N_A≈'+n(r.NA,1)+'，卖方参与 N_B≈'+n(r.NB,1)+'，平台利润≈'+n(r.profit,1)+'。利润最高的分配：P_A≈'+n(best.pa,2)+'、P_B≈'+n(best.pb,2)+'，利润≈'+n(best.profit,1)+'。'};

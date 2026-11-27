@@ -53,23 +53,21 @@ def test_demo(page,name):
         assert "B_x=3.5" in actual and "C_x=4" in actual, actual
     elif name=="chapters/11":
         set_value(page.locator('[data-lab="production"] [data-labor]'),16)
-        assert "Q=50.797" in page.locator('[data-result]').inner_text()
+        assert "Q=358.4" in page.locator('[data-result]').inner_text()
     elif name=="chapters/12":
-        set_value(page.locator('[data-lab="costs"] [data-output]'),5)
-        assert "ATC=16.4" in page.locator('[data-result]').inner_text()
+        set_value(page.locator('[data-lab="cost"] [data-qty]'),5)
+        assert "ATC=37.5" in page.locator('[data-result]').inner_text()
     elif name=="chapters/13":
-        set_value(page.locator('[data-lab="competition"] [data-firm-price]'),5)
-        assert "停产 q=0" in page.locator('[data-result]').inner_text()
-        set_value(page.locator('[data-lab="competition"] [data-firm-price]'),8)
-        assert "利润π=-25.697" in page.locator('[data-result]').inner_text()
+        set_value(page.locator('[data-lab="firm"] [data-price]'),5)
+        assert "停产" in page.locator('[data-result]').inner_text()
+        set_value(page.locator('[data-lab="firm"] [data-price]'),40)
+        assert "利润=-180" in page.locator('[data-result]').inner_text()
     elif name=="chapters/14":
-        set_value(page.locator('[data-lab="entry"] [data-demand-intercept]'),120)
-        assert "需要15家企业" in page.locator('[data-result]').inner_text()
+        set_value(page.locator('[data-lab="surplus"] [data-demand]'),120)
+        assert "总剩余=2500" in page.locator('[data-result]').inner_text()
     elif name=="chapters/15":
-        set_value(page.locator('[data-lab="monopoly"] [data-monopoly-mc]'),30)
-        assert "垄断：Q=35" in page.locator('[data-lab="monopoly"] [data-result]').inner_text()
-        page.locator('[data-lab="discrimination"] [data-pricing]').select_option("segment")
-        assert "收入3100" in page.locator('[data-lab="discrimination"] [data-result]').inner_text()
+        set_value(page.locator('[data-lab="monopoly"] [data-mc]'),30)
+        assert "Qm=35" in page.locator('[data-lab="monopoly"] [data-result]').inner_text()
 
 with Server(("127.0.0.1",PORT),QuietHandler) as server:
     threading.Thread(target=server.serve_forever,daemon=True).start()
@@ -133,7 +131,7 @@ with Server(("127.0.0.1",PORT),QuietHandler) as server:
         page.emulate_media(media="print")
         assert page.locator("figure img").first.is_visible()
         page.screenshot(path=str(OUTPUT/"chapter15-print.png"),full_page=True)
-        for svg in ("06-price-elasticity","07-tax-wedge","08-utility-budget","09-budget-rotation","10-hicks-decomposition","11-production-curve","12-short-run-costs","13-price-taking-firm","14-entry-exit","15-monopoly-welfare"):
+        for svg in ("06-price-elasticity","07-tax-wedge","08-utility-budget","09-budget-rotation","10-hicks-decomposition","11-production-curves","12-cost-curves","13-competitive-firm","14-entry-exit","15-monopoly-profit"):
             response=page.goto(f"{ROOT}/assets/figures/{svg}.svg",wait_until="load")
             assert response and response.status==200, svg
             assert page.locator("svg").count()==1

@@ -97,8 +97,8 @@ def main():
         ids=[x.attrib["id"] for x in root.iter() if "id" in x.attrib]
         assert len(ids)==len(set(ids)), f"duplicate SVG IDs: {path}"
         assert not any(x.tag.endswith("script") for x in root.iter()), f"SVG script: {path}"
-    print(f"PASS: 28 chapters, first {REVISED} reviewed, 56 SVGs, 10 evidence files, local links, MathML structure.")
-    print("LEGACY NOTE: chapters 11–28 retained but not subject to deep editorial audit.")
+    print(f"PASS: 28 chapters, first {REVISED} reviewed, {len(figures)} SVGs, 28 evidence files, local links, MathML structure.")
+    print("LEGACY NOTE: chapters 16–28 retained but not subject to deep editorial audit.")
 
 if __name__=="__main__":
     main()
